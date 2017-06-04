@@ -10,7 +10,7 @@ yarn watch
 open http://localhost:4000
 ```
 
-Edit markdown/images/styles in content folder.
+Edit `markdown/images/styles` files in `content` folder.
 
 
 ## Release
@@ -19,7 +19,5 @@ Make sure you have cloned [mermaid website](https://mermaidjs.github.io) to the 
 
 ```
 yarn release
-cd ../mermaidjs.github.io
-git commit -a
-git push
+cd ../mermaidjs.github.io && git commit -a && git push
 ```
