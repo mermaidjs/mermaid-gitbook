@@ -2,8 +2,8 @@
   "name": "mermaidjs.github.io",
   "version": "0.1.0",
   "scripts": {
-    "start": "gitbook serve ./markdown ../mermaidjs.github.io",
-    "build": "gitbook build ./markdown ../mermaidjs.github.io"
+    "start": "gitbook serve ./markdown ./www",
+    "release": "gitbook build ./markdown ./www && cp -r www/* ../mermaidjs.github.io/"
   },
   "devDependencies": {
     "gitbook-cli": "^2.3.0"
