@@ -1,0 +1,692 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Sequence diagram · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="gantt.html" />
+    
+    
+    <link rel="prev" href="flowchart.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    mermaid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="usage.html">
+            
+                <a href="usage.html">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="flowchart.html">
+            
+                <a href="flowchart.html">
+            
+                    
+                    Flowchat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="sequenceDiagram.html">
+            
+                <a href="sequenceDiagram.html">
+            
+                    
+                    Sequence diagram
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="gantt.html">
+            
+                <a href="gantt.html">
+            
+                    
+                    Gantt diagram
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="mermaidCLI.html">
+            
+                <a href="mermaidCLI.html">
+            
+                    
+                    mermaid CLI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="demos.html">
+            
+                <a href="demos.html">
+            
+                    
+                    Demos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="development.html">
+            
+                <a href="development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="upgrading.html">
+            
+                <a href="upgrading.html">
+            
+                    
+                    Upgrade from version -0.4.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Sequence diagram</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="sequence-diagrams">Sequence diagrams</h1>
+<blockquote>
+<p>A Sequence diagram is an interaction diagram that shows how processes operate with one another and in what order.</p>
+</blockquote>
+<p>Mermaid can render sequence diagrams. The code snippet below:</p>
+<pre><code>%% Example of sequence diagram
+sequenceDiagram
+    Alice-&gt;&gt;John: Hello John, how are you?
+    John--&gt;&gt;Alice: Great!
+</code></pre><p>Renders the following diagram:</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    Alice-&gt;&gt;John: Hello John, how are you?
+    John--&gt;&gt;Alice: Great!
+</code></pre>
+<h2 id="syntax">Syntax</h2>
+<h3 id="participants">Participants</h3>
+<p>The participants can be defined implicitly as in the first example on this page. The participants or actors are
+rendered in order of appearance in the diagram source text. Sometimes you might want to show the participants in a
+different order than how they appear in the first message. It is possible to specify the actor&apos;s order of
+appearance by doing the following:</p>
+<pre><code>%% Example of sequence diagram
+sequenceDiagram
+    participant John
+    participant Alice
+    Alice-&gt;&gt;John: Hello John, how are you?
+    John--&gt;&gt;Alice: Great!
+</code></pre><p>Renders to the diagram below:</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    participant John
+    participant Alice
+    Alice-&gt;&gt;John: Hello John, how are you?
+    John--&gt;&gt;Alice: Great!
+</code></pre>
+<h2 id="messages">Messages</h2>
+<p>Messages can be of two displayed either solid or with a dotted line.</p>
+<pre><code>[Actor][Arrow][Actor]:Message text
+</code></pre><p>There are six types of arrows currently supported:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-&gt;</td>
+<td>Solid line without arrow</td>
+</tr>
+<tr>
+<td>--&gt;</td>
+<td>Dotted line  without arrow</td>
+</tr>
+<tr>
+<td>-&gt;&gt;</td>
+<td>Solid line with arrowhead</td>
+</tr>
+<tr>
+<td>--&gt;&gt;</td>
+<td>Dotted line  with arrowhead</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>Solid line with a cross at the end (async)</td>
+</tr>
+<tr>
+<td>--x</td>
+<td>Dotted line with a cross at the end (async)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="activations">Activations</h2>
+<p>It is possible to activate and deactivate an actor. (de)activation can be dedicated declarations:</p>
+<pre><code>sequenceDiagram
+    Alice-&gt;&gt;John: Hello John, how are you?
+    activate John
+    John--&gt;&gt;Alice: Great!
+    deactivate John
+</code></pre><p>Renders to the diagram below:</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    Alice-&gt;&gt;John: Hello John, how are you?
+    activate John
+    John--&gt;&gt;Alice: Great!
+    deactivate John
+</code></pre>
+<p>There is also a shortcut notation by appending <code>+</code>/<code>-</code> suffix to the message arrow:</p>
+<pre><code>sequenceDiagram
+    Alice-&gt;&gt;+John: Hello John, how are you?
+    John--&gt;&gt;-Alice: Great!
+</code></pre><p>Activations can be stacked for same actor:</p>
+<pre><code>sequenceDiagram
+    Alice-&gt;&gt;+John: Hello John, how are you?
+    Alice-&gt;&gt;+John: John, can you hear me?
+    John--&gt;&gt;-Alice: Hi Alice, I can hear you!
+    John--&gt;&gt;-Alice: I feel great!
+</code></pre><p>Stacked activations look like this:</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    Alice-&gt;&gt;+John: Hello John, how are you?
+    Alice-&gt;&gt;+John: John, can you hear me?
+    John--&gt;&gt;-Alice: Hi Alice, I can hear you!
+    John--&gt;&gt;-Alice: I feel great!
+</code></pre>
+<h2 id="notes">Notes</h2>
+<p>It is possible to add notes to a sequence diagram. This is done by the notation
+Note [ right of | left of | over ] [Actor]: Text in note content</p>
+<p>See the example below:</p>
+<pre><code>%% Example of sequence diagram
+sequenceDiagram
+    participant John
+    Note right of John: Text in note
+</code></pre><p>Renders to the diagram below:</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    participant John
+    Note right of John: Text in note
+</code></pre>
+<p>It is also possible to create notes spanning two participants:</p>
+<pre><code>sequenceDiagram
+    Alice-&gt;John: Hello John, how are you?
+    Note over Alice,John: A typical interaction
+</code></pre><pre><code class="lang-mermaid">sequenceDiagram
+    Alice-&gt;John: Hello John, how are you?
+    Note over Alice,John: A typical interaction
+</code></pre>
+<h2 id="loops">Loops</h2>
+<p>It is possible to express loops in a sequence diagram. This is done by the notation</p>
+<pre><code>loop Loop text
+... statements ...
+end
+</code></pre><p>See the example below</p>
+<pre><code>%% Example of sequence diagram
+sequenceDiagram
+    Alice-&gt;John: Hello John, how are you?
+    loop Reply every minute
+        John--&gt;Alice: Great!
+    end
+</code></pre><pre><code class="lang-mermaid">sequenceDiagram
+    Alice-&gt;John: Hello John, how are you?
+    loop Every minute
+        John--&gt;Alice: Great!
+    end
+</code></pre>
+<h2 id="alt">Alt</h2>
+<p>It is possible to express alternative paths in a sequence diagram. This is done by the notation</p>
+<pre><code>alt Describing text
+... statements ...
+else
+... statements ...
+end
+</code></pre><p>or if there is sequence that is optional (if without else).</p>
+<pre><code>opt Describing text
+... statements ...
+end
+</code></pre><p>See the example below</p>
+<pre><code>%% Example of sequence diagram
+    sequenceDiagram
+        Alice-&gt;&gt;Bob: Hello Bob, how are you?
+        alt is sick
+            Bob-&gt;&gt;Alice: Not so good :(
+        else is well
+            Bob-&gt;&gt;Alice: Feeling fresh like a daisy
+        end
+        opt Extra response
+            Bob-&gt;&gt;Alice: Thanks for asking
+        end
+</code></pre><pre><code class="lang-mermaid">sequenceDiagram
+    Alice-&gt;&gt;Bob: Hello Bob, how are you?
+    alt is sick
+        Bob-&gt;&gt;Alice: Not so good :(
+    else is well
+        Bob-&gt;&gt;Alice: Feeling fresh like a daisy
+    end
+    opt Extra response
+        Bob-&gt;&gt;Alice: Thanks for asking
+    end
+</code></pre>
+<h2 id="styling">Styling</h2>
+<p>Styling of the a sequence diagram is done by defining a number of css classes.  During rendering these classes are extracted from the</p>
+<h3 id="classes-used">Classes used</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>actor</td>
+<td>Style for the actor box at the top of the diagram.</td>
+</tr>
+<tr>
+<td>text.actor</td>
+<td>Styles for text in the actor box at the top of the diagram.</td>
+</tr>
+<tr>
+<td>actor-line</td>
+<td>The vertical line for an actor.</td>
+</tr>
+<tr>
+<td>messageLine0</td>
+<td>Styles for the solid message line.</td>
+</tr>
+<tr>
+<td>messageLine1</td>
+<td>Styles for the dotted message line.</td>
+</tr>
+<tr>
+<td>messageText</td>
+<td>Defines styles for the text on the message arrows.</td>
+</tr>
+<tr>
+<td>labelBox</td>
+<td>Defines styles label to left in a loop.</td>
+</tr>
+<tr>
+<td>labelText</td>
+<td>Styles for the text in label for loops.</td>
+</tr>
+<tr>
+<td>loopText</td>
+<td>Styles for the text in the loop box.</td>
+</tr>
+<tr>
+<td>loopLine</td>
+<td>Defines styles for the lines in the loop box.</td>
+</tr>
+<tr>
+<td>note</td>
+<td>Styles for the note box.</td>
+</tr>
+<tr>
+<td>noteText</td>
+<td>Styles for the text on in the note boxes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-stylesheet">Sample stylesheet</h3>
+<pre><code class="lang-css">
+<span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">background</span>: white;
+}
+
+<span class="hljs-selector-class">.actor</span> {
+    <span class="hljs-attribute">stroke</span>: <span class="hljs-number">#CCCCFF</span>;
+    <span class="hljs-attribute">fill</span>: <span class="hljs-number">#ECECFF</span>;
+}
+<span class="hljs-selector-tag">text</span><span class="hljs-selector-class">.actor</span> {
+    <span class="hljs-attribute">fill</span>:black;
+    <span class="hljs-attribute">stroke</span>:none;
+    <span class="hljs-attribute">font-family</span>: Helvetica;
+}
+
+<span class="hljs-selector-class">.actor-line</span> {
+    <span class="hljs-attribute">stroke</span>:grey;
+}
+
+<span class="hljs-selector-class">.messageLine0</span> {
+    <span class="hljs-attribute">stroke-width</span>:<span class="hljs-number">1.5</span>;
+    <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-string">&quot;2 2&quot;</span>;
+    <span class="hljs-attribute">marker-end</span>:<span class="hljs-string">&quot;url(#arrowhead)&quot;</span>;
+    <span class="hljs-attribute">stroke</span>:black;
+}
+
+<span class="hljs-selector-class">.messageLine1</span> {
+    <span class="hljs-attribute">stroke-width</span>:<span class="hljs-number">1.5</span>;
+    <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-string">&quot;2 2&quot;</span>;
+    <span class="hljs-attribute">stroke</span>:black;
+}
+
+<span class="hljs-selector-id">#arrowhead</span> {
+    <span class="hljs-attribute">fill</span>:black;
+
+}
+
+<span class="hljs-selector-class">.messageText</span> {
+    <span class="hljs-attribute">fill</span>:black;
+    <span class="hljs-attribute">stroke</span>:none;
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&apos;trebuchet ms&apos;</span>, verdana, arial;
+    <span class="hljs-attribute">font-size</span>:<span class="hljs-number">14px</span>;
+}
+
+<span class="hljs-selector-class">.labelBox</span> {
+    <span class="hljs-attribute">stroke</span>: <span class="hljs-number">#CCCCFF</span>;
+    <span class="hljs-attribute">fill</span>: <span class="hljs-number">#ECECFF</span>;
+}
+
+<span class="hljs-selector-class">.labelText</span> {
+    <span class="hljs-attribute">fill</span>:black;
+    <span class="hljs-attribute">stroke</span>:none;
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&apos;trebuchet ms&apos;</span>, verdana, arial;
+}
+
+<span class="hljs-selector-class">.loopText</span> {
+    <span class="hljs-attribute">fill</span>:black;
+    <span class="hljs-attribute">stroke</span>:none;
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&apos;trebuchet ms&apos;</span>, verdana, arial;
+}
+
+<span class="hljs-selector-class">.loopLine</span> {
+    <span class="hljs-attribute">stroke-width</span>:<span class="hljs-number">2</span>;
+    <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-string">&quot;2 2&quot;</span>;
+    <span class="hljs-attribute">marker-end</span>:<span class="hljs-string">&quot;url(#arrowhead)&quot;</span>;
+    <span class="hljs-attribute">stroke</span>: <span class="hljs-number">#CCCCFF</span>;
+}
+
+<span class="hljs-selector-class">.note</span> {
+    <span class="hljs-attribute">stroke</span>: <span class="hljs-number">#decc93</span>;
+    <span class="hljs-attribute">stroke</span>: <span class="hljs-number">#CCCCFF</span>;
+    <span class="hljs-attribute">fill</span>: <span class="hljs-number">#fff5ad</span>;
+}
+
+<span class="hljs-selector-class">.noteText</span> {
+    <span class="hljs-attribute">fill</span>:black;
+    <span class="hljs-attribute">stroke</span>:none;
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&apos;trebuchet ms&apos;</span>, verdana, arial;
+    <span class="hljs-attribute">font-size</span>:<span class="hljs-number">14px</span>;
+}
+</code></pre>
+<h2 id="configuration">Configuration</h2>
+<p>Is it possible to adjust the margins for rendering the sequence diagram.</p>
+<p>This is done by defining <strong>mermaid.sequenceConfig</strong> or by the CLI to use a json file with the configuration.
+How to use the CLI is described in the <a href="#mermaid-cli8">mermaidCLI</a> page.
+<strong>mermaid.sequenceConfig</strong> can be set to a JSON string with config parameters or the corresponding object.</p>
+<pre><code>mermaid.sequenceConfig = {
+    diagramMarginX:50,
+    diagramMarginY:10,
+    boxTextMargin:5,
+    noteMargin:10,
+    messageMargin:35,
+    mirrorActors:true
+    };
+</code></pre><h3 id="possible-configration-params">Possible configration params:</h3>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Descriotion</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mirrorActor</td>
+<td>Turns on/off the rendering of actors below the diagram as well as above it</td>
+<td>false</td>
+</tr>
+<tr>
+<td>bottomMarginAdj</td>
+<td>Adjusts how far down the graph ended. Wide borders styles with css could generate unwantewd clipping which is why this config param exists.</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="flowchart.html" class="navigation navigation-prev " aria-label="Previous page: Flowchat">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="gantt.html" class="navigation navigation-next " aria-label="Next page: Gantt diagram">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Sequence diagram","order":3,"level":"1.4","depth":1,"next":{"title":"Gantt diagram","level":"1.5","depth":1,"path":"gantt.md","ref":"gantt.md","articles":[]},"previous":{"title":"Flowchat","level":"1.3","depth":1,"path":"flowchart.md","ref":"flowchart.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"sequenceDiagram.md","mtime":"2017-06-04T09:00:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-04T10:06:50.168Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

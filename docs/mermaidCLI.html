@@ -1,0 +1,396 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>mermaid CLI · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="demos.html" />
+    
+    
+    <link rel="prev" href="gantt.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    mermaid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="usage.html">
+            
+                <a href="usage.html">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="flowchart.html">
+            
+                <a href="flowchart.html">
+            
+                    
+                    Flowchat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="sequenceDiagram.html">
+            
+                <a href="sequenceDiagram.html">
+            
+                    
+                    Sequence diagram
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="gantt.html">
+            
+                <a href="gantt.html">
+            
+                    
+                    Gantt diagram
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="mermaidCLI.html">
+            
+                <a href="mermaidCLI.html">
+            
+                    
+                    mermaid CLI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="demos.html">
+            
+                <a href="demos.html">
+            
+                    
+                    Demos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="development.html">
+            
+                <a href="development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="upgrading.html">
+            
+                <a href="upgrading.html">
+            
+                    
+                    Upgrade from version -0.4.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >mermaid CLI</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mermaid-cli">mermaid CLI</h1>
+<p>Installing mermaid globally (<code>npm install -g mermaid</code>) will expose the <code>mermaid</code> command to your environment, allowing you to generate PNGs from any file containing mermaid markup via the command line.</p>
+<p><strong>Note:</strong> The <code>mermaid</code> command requires <a href="http://phantomjs.org/" target="_blank">PhantomJS</a> (version <code>^1.9.0</code>) to be installed and available in your <em>$PATH</em>, or you can specify it&apos;s location with the <code>-e</code> option. For most environments, <code>npm install -g phantomjs</code> will satisfy this requirement.</p>
+<h2 id="usage">Usage</h2>
+<pre><code>$ mermaid --help
+
+Usage: mermaid [options] &lt;file&gt;...
+
+file    The mermaid description file to be rendered
+
+Options:
+  -s --svg             Output SVG instead of PNG (experimental)
+  -p --png             If SVG was selected, and you also want PNG, set this flag
+  -o --outputDir       Directory to save files, will be created automatically, defaults to `cwd`
+  -O --outputSuffix    Suffix to output filenames in front of &apos;.svg&apos; or &apos;.png&apos;, defaults to &apos;&apos;
+  -e --phantomPath     Specify the path to the phantomjs executable
+  -t --css             Specify the path to a CSS file to be included when processing output
+  -c --sequenceConfig  Specify the path to the file with the configuration to be applied in the sequence diagram
+  -g --ganttConfig     Specify the path to the file with the configuration to be applied in the gantt diagram
+  -h --help            Show this message
+  -v --verbose         Show logging
+  -w --width           width of the generated png (number)
+  --version            Print version and quit
+</code></pre><pre><code>mermaid testGraph.mmd
+mermaid testGraph.mmd -w 980
+</code></pre><h2 id="sequence-diagram-configuration">Sequence diagram configuration</h2>
+<p>The --sequenceConfig option allows overriding the sequence diagram configuration. It could be useful to increase the width between actors, the notes width or the margin to fit some large texts that are not well rendered with the default configuration, for example.</p>
+<p>The content of the file must be a JSON like this:</p>
+<pre><code>
+{
+    &quot;diagramMarginX&quot;: 100,
+    &quot;diagramMarginY&quot;: 10,
+    &quot;actorMargin&quot;: 150,
+    &quot;width&quot;: 150,
+    &quot;height&quot;: 65,
+    &quot;boxMargin&quot;: 10,
+    &quot;boxTextMargin&quot;: 5,
+    &quot;noteMargin&quot;: 10,
+    &quot;messageMargin&quot;: 35
+}
+</code></pre><p>These properties will override the default values and if a property is not set in this object, it will left it empty and could raise an error. The current properties (measured in px) are:</p>
+<ul>
+<li>diagramMarginX: Size of the empty space to add at the left-right of the diagram.</li>
+<li>diagramMarginY: Size of the empty space to add at the top-bottom of the diagram.</li>
+<li>actorMargin: Horizontal space between each participant. The arrows between them would have this size too.</li>
+<li>width: Width of the participant box.</li>
+<li>height: Height of the participant box.</li>
+<li>boxMargin: Blank area around loop boxes.</li>
+<li>boxTextMargin: Blank area between the text and the border in a loop box.</li>
+<li>noteMargin: Size of the empty space around a note.</li>
+<li>messageMargin: Space between messages</li>
+</ul>
+<h2 id="cli-known-issues">CLI Known Issues</h2>
+<ul>
+<li>SVG output currently does some replacement on text, as mermaid&apos;s SVG output is only appropriate for browsers. Text color and background color is not yet replicated; please use PNGs for most purposes until this is resolved.</li>
+<li>SVG output is decidedly non-standard. It works, but may cause issues in some viewers.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="gantt.html" class="navigation navigation-prev " aria-label="Previous page: Gantt diagram">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="demos.html" class="navigation navigation-next " aria-label="Next page: Demos">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"mermaid CLI","order":4,"level":"1.6","depth":1,"next":{"title":"Demos","level":"1.7","depth":1,"path":"demos.md","ref":"demos.md","articles":[]},"previous":{"title":"Gantt diagram","level":"1.5","depth":1,"path":"gantt.md","ref":"gantt.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mermaidCLI.md","mtime":"2017-06-04T08:55:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-04T10:06:50.168Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
