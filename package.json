@@ -2,10 +2,12 @@
   "name": "mermaidjs.github.io",
   "version": "0.1.0",
   "scripts": {
-    "start": "gitbook serve ./content ./www",
+    "upgrade": "yarn-upgrade-all",
+    "watch": "gitbook serve ./content ./www",
     "release": "gitbook build ./content ./www && cp -r www/* ../mermaidjs.github.io/"
   },
   "devDependencies": {
-    "gitbook-cli": "^2.3.0"
+    "gitbook-cli": "^2.3.0",
+    "yarn-upgrade-all": "^0.1.5"
   }
 }
