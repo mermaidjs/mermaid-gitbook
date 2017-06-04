@@ -1,3 +1,3 @@
-# [mermaid website](https://mermaidjs.github.io/www/)
+# mermaid-gitbook
 
-Documentation website for mermaid.
+GitBook source code for [mermaid website](https://mermaidjs.github.io).
