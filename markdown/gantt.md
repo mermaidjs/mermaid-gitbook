@@ -1,4 +1,5 @@
 ---
+title: Gantt Diagram
 order: 4
 ---
 
@@ -59,12 +60,12 @@ gantt
         Describe gantt syntax               :active, a1, after des1, 3d
         Add gantt diagram to demo page      :after a1  , 20h
         Add another diagram to demo page    :doc1, after a1  , 48h
-        
+
         section Last section
         Describe gantt syntax               :after doc1, 3d
         Add gantt diagram to demo page      :20h
         Add another diagram to demo page    :48h
-``` 
+```
 
 Renders like below:
 
@@ -91,12 +92,12 @@ gantt
        Describe gantt syntax               :active, a1, after des1, 3d
        Add gantt diagram to demo page      :after a1  , 20h
        Add another diagram to demo page    :doc1, after a1  , 48h
-       
+
        section Last section
        Describe gantt syntax               :after doc1, 3d
        Add gantt diagram to demo page      :20h
        Add another diagram to demo page    :48h
-```  
+   ```
 ### Title
 
 Tbd
@@ -252,3 +253,22 @@ Is it possible to adjust the margins for rendering the sequence diagram.
 
 This is done by defining the **sequenceConfig** part of the configuration object. Read more about it [here](#configuration35).
 How to use the CLI is described in the [mermaidCLI](#mermaid-cli8) page.
+
+mermaid.sequenceConfig can be set to a JSON string with config parameters or the corresponding object.
+
+```
+mermaid.ganttConfig = {
+    titleTopMargin:25,
+    barHeight:20,
+    barGap:4,
+    topPadding:75,
+    sidePadding:75
+    };
+```
+
+### Possible configration params:
+
+Param | Descriotion | Default value
+--- | --- | ---
+mirrorActor|Turns on/off the rendering of actors below the diagram as well as above it|false
+bottomMarginAdj|Adjusts how far down the graph ended. Wide borders styles with css could generate unwantewd clipping which is why this config param exists.|1

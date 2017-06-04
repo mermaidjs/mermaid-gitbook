@@ -1,4 +1,5 @@
 ---
+title: Development
 order: 9
 ---
 # Development
@@ -11,15 +12,24 @@ order: 9
 
 ## Working with the documentation
 
-The html files are generated from the source and the markdown files in the docs folder. The site generation is done
-using the docker.js framework with the command below.
-
-```
-docker -i ../mermaid/ -x "*git*|*travis*|*bin*|*dist*|*node_modules*|*gulp*|*lib*|*editor*|*conf*|*scripts*|*test*|*htmlDocs*" --extras mermaid -w -o htmlDocs
-```
+The html files are generated from the markdown files in the docs folder.
 
 Thus ... One important thing to remember. * Do not edit the html files directly! * Those changes will be overwritten
 when the site is re-generated.
+
+There are some commands that are important in working with the documentation:
+```
+gulp site
+```
+
+This command generates html files from the markdown files in the docs folder. If you do a small fix to a markdown file,
+remember to run this command before submitting your changes as they will not be reflected in the html files if you don't.
+
+```
+gulp www
+```
+
+This command starts a small mini express server for viewing the documentation site.
 
 ## Committing the changes
 

@@ -2,6 +2,7 @@
 title: Demos
 order: 5
 ---
+
 # Demos
 ## Basic flowchart
 ```
@@ -85,6 +86,7 @@ sequenceDiagram
 	Bob-->Alice: Checking with John...
 	Alice->John: Yes... John, how are you?
 ```
+
 ```mermaid
 sequenceDiagram
 	Alice->> Bob: Hello Bob, how are you?
@@ -114,6 +116,7 @@ sequenceDiagram
 		end
 	end
 ```
+
 ```mermaid
 sequenceDiagram
 	loop Daily query
@@ -144,6 +147,7 @@ sequenceDiagram
 	John->>Bob: How about you?
 	Bob-->>John: Jolly good!
 ```
+
 ```mermaid
 sequenceDiagram
 	participant Alice

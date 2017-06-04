@@ -397,7 +397,7 @@ If a class is named default it will be assigned to all classes without specific 
 
 ## Basic support for fontawesome
 
-It is possible to add icons from fontawesome. In order to do so, you need to add the fontawesome as described in the instructions at 
+It is possible to add icons from fontawesome. In order to do so, you need to add the fontawesome as described in the instructions at
 [the fontawesome web site](https://fortawesome.github.io/Font-Awesome/).
 
 The icons are acessed via the syntax fa:#icon class name#.
@@ -445,4 +445,18 @@ graph LR
     B --> C{Decision}
     C -->|One| D[Result one]
     C -->|Two| E[Result two]
+```
+
+## Configuration...
+
+Is it possible to adjust the width of the rendered flowchart.
+
+This is done by defining **mermaid.flowchartConfig** or by the CLI to use a json file with the configuration. How to use
+the CLI is described in the mermaidCLI page.
+mermaid.flowchartConfig can be set to a JSON string with config parameters or the corresponding object.
+
+```
+mermaid.flowchartConfig = {
+        width:100%;
+    };
 ```

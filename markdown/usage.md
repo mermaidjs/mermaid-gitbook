@@ -114,7 +114,7 @@ An id is also added to mermaid tags without id.
 ```
 ### Labels out of bounds
 
-If you use dynamically loaded fonts that are loaded through CSS, such as Google fonts, mermaid should wait for the 
+If you use dynamically loaded fonts that are loaded through CSS, such as Google fonts, mermaid should wait for the
 whole page to have been loaded (dom + assets, particularly the fonts file).
 
 $(document).load(function() {
@@ -126,7 +126,7 @@ $(document).ready(function() {
     mermaid.initialize();
 });
 
-Not doing so will most likely result in mermaid rendering graphs that have labels out of bounds. The default integration 
+Not doing so will most likely result in mermaid rendering graphs that have labels out of bounds. The default integration
 in mermaid uses the window.load event to start rendering.
 
 ### Calling **mermaid.init**
@@ -229,12 +229,12 @@ $(function(){
 
 ### Binding events
 
-Sometimes the generated graph also has defined interactions like tooltip and click events. When using the API one must 
+Sometimes the generated graph also has defined interactions like tooltip and click events. When using the API one must
 add those events after the graph has been inserted into the DOM.
- 
-The example code below is an extract of wheat mermaid does when using the API. The example show how it is possible to 
+
+The example code below is an extract of wheat mermaid does when using the API. The example show how it is possible to
 bind events to a svg when using the API for rendering.
- 
+
 ```
      var insertSvg = function(svgCode, bindFunctions){
          element.innerHTML = svgCode;
@@ -250,9 +250,9 @@ bind events to a svg when using the API for rendering.
      mermaidAPI.render(id,txt,insertSvg, element);
 ```
 
-1. The graph is generated using the render call. 
+1. The graph is generated using the render call.
 2. After generation the render function calls the provided callback function, in this case its called insertSvg.
-3. The callback function is called with two parameters, the svg code of the generated graph and a function. This 
+3. The callback function is called with two parameters, the svg code of the generated graph and a function. This
 function binds events to the svg **after** it is inserted into the DOM.
 4. Insert the svg code into the DOM for presentation
 5. Call the binding function that bainds the events

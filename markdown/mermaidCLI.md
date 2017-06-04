@@ -1,4 +1,5 @@
 ---
+title: mermaid CLI
 order: 4
 ---
 

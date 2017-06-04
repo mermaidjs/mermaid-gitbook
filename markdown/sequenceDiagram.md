@@ -90,7 +90,7 @@ sequenceDiagram
     deactivate John
 ```
 
-There is also a shortcut notation by appending `+`/`-` suffix to the message arrow:  
+There is also a shortcut notation by appending `+`/`-` suffix to the message arrow:
 
 ```
 sequenceDiagram
@@ -353,5 +353,5 @@ mermaid.sequenceConfig = {
 
 Param | Descriotion | Default value
 --- | --- | ---
-mirrorActor     | Turns on/off the rendering of actors below the diagram as well as above it                                                                  | false
+mirrorActor | Turns on/off the rendering of actors below the diagram as well as above it | false
 bottomMarginAdj | Adjusts how far down the graph ended. Wide borders styles with css could generate unwantewd clipping which is why this config param exists. | 1
