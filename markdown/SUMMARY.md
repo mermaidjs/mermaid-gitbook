@@ -1,6 +1,6 @@
 # Summary
 
-- [mermaid](index.md)
+- [mermaid](README.md)
 - [Usage](usage.md)
 - [Flowchat](flowchart.md)
 - [Sequence diagram](sequenceDiagram.md)
