@@ -8,6 +8,8 @@
   },
   "devDependencies": {
     "gitbook-cli": "^2.3.0",
+    "gitbook-plugin-scripts": "^1.0.2",
+    "standard": "^10.0.2",
     "yarn-upgrade-all": "^0.1.5"
   }
 }
