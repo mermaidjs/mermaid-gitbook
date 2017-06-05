@@ -1,10 +1,16 @@
 {
-    "plugins": ["scripts"],
-    "pluginsConfig": {
-        "scripts": {
-            "files": [
-                "./scripts/index.js"
-            ]
-        }
+  "plugins": [
+    "addcssjs"
+  ],
+  "pluginsConfig": {
+    "addcssjs": {
+      "js": [
+        "./scripts/mermaid.min.js",
+        "./scripts/index.js"
+      ],
+      "css": [
+        "./styles/mermaid.forest.min.css"
+      ]
     }
+  }
 }
