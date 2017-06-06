@@ -16,7 +16,8 @@ This is why mermaid was born, a simple markdown-like script language for generat
 Code examples below:
 
 ### An example of a flowchart
-```
+
+```mermaid
 graph TD;
     A-->B;
     A-->C;
@@ -25,7 +26,8 @@ graph TD;
 ```
 
 ### An example of a sequence diagram
-```
+
+```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
@@ -33,14 +35,14 @@ sequenceDiagram
     loop Healthcheck
         John->John: Fight against hypochondria
     end
-    Note right of John: Rational thoughts &lt;br/>prevail...
+    Note right of John: Rational thoughts <br/>prevail...
     John-->Alice: Great!
     John->Bob: How about you?
     Bob-->John: Jolly good!
 ```
 
 ### Example code for a gantt diagram
-```
+```mermaid
 gantt
         dateFormat  YYYY-MM-DD
         title Adding GANTT diagram functionality to mermaid
