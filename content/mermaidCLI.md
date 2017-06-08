@@ -1,13 +1,9 @@
----
-title: mermaid CLI
-order: 4
----
-
 # mermaid CLI
 
 Installing mermaid globally (`npm install -g mermaid`) will expose the `mermaid` command to your environment, allowing you to generate PNGs from any file containing mermaid markup via the command line.
 
 **Note:** The `mermaid` command requires [PhantomJS](http://phantomjs.org/) (version `^1.9.0`) to be installed and available in your *$PATH*, or you can specify it's location with the `-e` option. For most environments, `npm install -g phantomjs` will satisfy this requirement.
+
 
 ## Usage
 
@@ -38,14 +34,14 @@ mermaid testGraph.mmd
 mermaid testGraph.mmd -w 980
 ```
 
+
 ## Sequence diagram configuration
 
 The --sequenceConfig option allows overriding the sequence diagram configuration. It could be useful to increase the width between actors, the notes width or the margin to fit some large texts that are not well rendered with the default configuration, for example.
 
 The content of the file must be a JSON like this:
 
-```
-
+```json
 {
     "diagramMarginX": 100,
     "diagramMarginY": 10,
@@ -57,7 +53,6 @@ The content of the file must be a JSON like this:
     "noteMargin": 10,
     "messageMargin": 35
 }
-
 ```
 
 These properties will override the default values and if a property is not set in this object, it will left it empty and could raise an error. The current properties (measured in px) are:
@@ -71,6 +66,7 @@ These properties will override the default values and if a property is not set i
 - boxTextMargin: Blank area between the text and the border in a loop box.
 - noteMargin: Size of the empty space around a note.
 - messageMargin: Space between messages
+
 
 ## CLI Known Issues
 
