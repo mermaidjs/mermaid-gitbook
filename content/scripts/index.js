@@ -1,10 +1,9 @@
-let url = null
+let path = null
 
 setInterval(() => {
-  if (url !== window.location.href) {
-    url = window.location.href
+  if (path !== window.location.pathname) {
+    path = window.location.pathname
     document.querySelectorAll('.lang-mermaid').forEach(node => {
-      console.log(node)
       const newNode = node.cloneNode(true)
       newNode.removeAttribute('class')
       const hr = document.createElement('hr')

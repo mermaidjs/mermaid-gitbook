@@ -156,8 +156,8 @@ to start would be http://browserify.org/ website.
 
 Minimalistic javascript:
 ```
-mermaid = require('mermaid');
-console.log('Test page! mermaid version'+mermaid.version());
+mermaid = require('mermaid')
+console.log('Test page! mermaid version' + mermaid.version())
 ```
 Bundle the javascript with browserify.
 
