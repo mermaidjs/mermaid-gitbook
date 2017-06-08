@@ -1,27 +1,8 @@
----
-title: Gantt Diagram
-order: 4
----
-
 # Gant diagrams
 
 > A Gantt chart is a type of bar chart, first developed by Karol Adamiecki in 1896, and independently by Henry Gantt in the 1910s, that illustrates a project schedule. Gantt charts illustrate the start and finish dates of the terminal elements and summary elements of a project.
 
-Mermaid can render Gantt diagrams. The code snippet below:
-```
-%% Example of sequence diagram
-gantt
-    title A Gantt Diagram
-
-    section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
-    section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
-```
-
-Renders the following diagram:
+Mermaid can render Gantt diagrams.
 
 ```mermaid
 gantt
@@ -35,39 +16,8 @@ gantt
     another task      : 24d
 ```
 
+
 ## Syntax
-```
-%% Example with slection of syntaxes
-        gantt
-        dateFormat  YYYY-MM-DD
-        title Adding GANTT diagram functionality to mermaid
-
-        section A section
-        Completed task            :done,    des1, 2014-01-06,2014-01-08
-        Active task               :active,  des2, 2014-01-09, 3d
-        Future task               :         des3, after des2, 5d
-        Future task2              :         des4, after des3, 5d
-
-        section Critical tasks
-        Completed task in the critical line :crit, done, 2014-01-06,24h
-        Implement parser and jison          :crit, done, after des1, 2d
-        Create tests for parser             :crit, active, 3d
-        Future task in critical line        :crit, 5d
-        Create tests for renderer           :2d
-        Add to mermaid                      :1d
-
-        section Documentation
-        Describe gantt syntax               :active, a1, after des1, 3d
-        Add gantt diagram to demo page      :after a1  , 20h
-        Add another diagram to demo page    :doc1, after a1  , 48h
-
-        section Last section
-        Describe gantt syntax               :after doc1, 3d
-        Add gantt diagram to demo page      :20h
-        Add another diagram to demo page    :48h
-```
-
-Renders like below:
 
 ```mermaid
 gantt
@@ -98,24 +48,31 @@ gantt
        Add gantt diagram to demo page      :20h
        Add another diagram to demo page    :48h
    ```
+
 ### Title
 
 Tbd
+
 
 ## Sections statements
 
 Tbd
 
+
 ## Setting dates
 
 Tbd
+
 
 ### Date format
 
 Tbd
 
-#### Diagram definition
+
+### Diagram definition
+
 Input	Example	Description:
+
 ```
 YYYY	2014	4 digit year
 YY	14	2 digit year
@@ -142,7 +99,8 @@ Z ZZ	+12:00	Offset from UTC as +-HH:mm, +-HHmm, or Z
 
 More info in: http://momentjs.com/docs/#/parsing/string-format/
 
-#### Scale
+
+### Scale
 
 ```
 %a - abbreviated weekday name.
@@ -170,7 +128,9 @@ More info in: http://momentjs.com/docs/#/parsing/string-format/
 %Z - time zone offset, such as "-0700".
 %% - a literal "%" character.
 ```
+
 More info in: https://github.com/mbostock/d3/wiki/Time-Formatting
+
 
 ## Styling
 
@@ -197,73 +157,70 @@ noteText     | Styles for the text on in the note boxes.
 
 
 ```css
+.grid .tick {
+    stroke: lightgrey;
+    opacity: 0.3;
+    shape-rendering: crispEdges;
+}
+.grid path {
+    stroke-width: 0;
+}
 
-            .grid .tick {
-                stroke: lightgrey;
-                opacity: 0.3;
-                shape-rendering: crispEdges;
-            }
-            .grid path {
-                stroke-width: 0;
-            }
+#tag {
+    color: white;
+    background: #FA283D;
+    width: 150px;
+    position: absolute;
+    display: none;
+    padding:3px 6px;
+    margin-left: -80px;
+    font-size: 11px;
+}
 
-
-            #tag {
-                color: white;
-                background: #FA283D;
-                width: 150px;
-                position: absolute;
-                display: none;
-                padding:3px 6px;
-                margin-left: -80px;
-                font-size: 11px;
-            }
-
-
-
-            #tag:before {
-                border: solid transparent;
-                content: ' ';
-                height: 0;
-                left: 50%;
-                margin-left: -5px;
-                position: absolute;
-                width: 0;
-                border-width: 10px;
-                border-bottom-color: #FA283D;
-                top: -20px;
-            }
-            .taskText {
-                fill:white;
-                text-anchor:middle;
-            }
-            .taskTextOutsideRight {
-                fill:black;
-                text-anchor:start;
-            }
-            .taskTextOutsideLeft {
-                fill:black;
-                text-anchor:end;
-            }
-
+#tag:before {
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    width: 0;
+    border-width: 10px;
+    border-bottom-color: #FA283D;
+    top: -20px;
+}
+.taskText {
+    fill:white;
+    text-anchor:middle;
+}
+.taskTextOutsideRight {
+    fill:black;
+    text-anchor:start;
+}
+.taskTextOutsideLeft {
+    fill:black;
+    text-anchor:end;
+}
 ```
+
+
 ## Configuration
 
 Is it possible to adjust the margins for rendering the sequence diagram.
 
-This is done by defining the **sequenceConfig** part of the configuration object. Read more about it [here](#configuration35).
+This is done by defining the `sequenceConfig` part of the configuration object. Read more about it [here](#configuration35).
 How to use the CLI is described in the [mermaidCLI](#mermaid-cli8) page.
 
-mermaid.sequenceConfig can be set to a JSON string with config parameters or the corresponding object.
+mermaid.ganttConfig can be set to a JSON string with config parameters or the corresponding object.
 
-```
+```javascript
 mermaid.ganttConfig = {
     titleTopMargin:25,
     barHeight:20,
     barGap:4,
     topPadding:75,
     sidePadding:75
-    };
+}
 ```
 
 ### Possible configration params:
