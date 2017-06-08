@@ -1,20 +1,8 @@
----
-title: Sequence Diagram
-order: 3
----
 # Sequence diagrams
 
 > A Sequence diagram is an interaction diagram that shows how processes operate with one another and in what order.
 
-Mermaid can render sequence diagrams. The code snippet below:
-```
-%% Example of sequence diagram
-sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!
-```
-
-Renders the following diagram:
+Mermaid can render sequence diagrams.
 
 ```mermaid
 sequenceDiagram
@@ -31,17 +19,6 @@ rendered in order of appearance in the diagram source text. Sometimes you might 
 different order than how they appear in the first message. It is possible to specify the actor's order of
 appearance by doing the following:
 
-```
-%% Example of sequence diagram
-sequenceDiagram
-    participant John
-    participant Alice
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!
-```
-
-Renders to the diagram below:
-
 ```mermaid
 sequenceDiagram
     participant John
@@ -50,7 +27,9 @@ sequenceDiagram
     John-->>Alice: Great!
 ```
 
+
 ## Messages
+
 Messages can be of two displayed either solid or with a dotted line.
 
 ```
@@ -70,17 +49,8 @@ Type | Description
 
 
 ## Activations
+
 It is possible to activate and deactivate an actor. (de)activation can be dedicated declarations:
-
-```
-sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    activate John
-    John-->>Alice: Great!
-    deactivate John
-```
-
-Renders to the diagram below:
 
 ```mermaid
 sequenceDiagram
@@ -92,23 +62,13 @@ sequenceDiagram
 
 There is also a shortcut notation by appending `+`/`-` suffix to the message arrow:
 
-```
+```mermaid
 sequenceDiagram
     Alice->>+John: Hello John, how are you?
     John-->>-Alice: Great!
 ```
 
 Activations can be stacked for same actor:
-
-```
-sequenceDiagram
-    Alice->>+John: Hello John, how are you?
-    Alice->>+John: John, can you hear me?
-    John-->>-Alice: Hi Alice, I can hear you!
-    John-->>-Alice: I feel great!
-```
-
-Stacked activations look like this:
 
 ```mermaid
 sequenceDiagram
@@ -118,19 +78,13 @@ sequenceDiagram
     John-->>-Alice: I feel great!
 ```
 
+
 ## Notes
+
 It is possible to add notes to a sequence diagram. This is done by the notation
 Note [ right of | left of | over ] [Actor]: Text in note content
 
 See the example below:
-```
-%% Example of sequence diagram
-sequenceDiagram
-    participant John
-    Note right of John: Text in note
-```
-
-Renders to the diagram below:
 
 ```mermaid
 sequenceDiagram
@@ -139,11 +93,6 @@ sequenceDiagram
 ```
 
 It is also possible to create notes spanning two participants:
-```
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
 
 ```mermaid
 sequenceDiagram
@@ -151,23 +100,18 @@ sequenceDiagram
     Note over Alice,John: A typical interaction
 ```
 
+
 ## Loops
+
 It is possible to express loops in a sequence diagram. This is done by the notation
+
 ```
 loop Loop text
 ... statements ...
 end
 ```
 
-See the example below
-```
-%% Example of sequence diagram
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    loop Reply every minute
-        John-->Alice: Great!
-    end
-```
+See the example below:
 
 ```mermaid
 sequenceDiagram
@@ -177,8 +121,11 @@ sequenceDiagram
     end
 ```
 
+
 ## Alt
+
 It is possible to express alternative paths in a sequence diagram. This is done by the notation
+
 ```
 alt Describing text
 ... statements ...
@@ -195,21 +142,7 @@ opt Describing text
 end
 ```
 
-See the example below
-```
-%% Example of sequence diagram
-    sequenceDiagram
-        Alice->>Bob: Hello Bob, how are you?
-        alt is sick
-            Bob->>Alice: Not so good :(
-        else is well
-            Bob->>Alice: Feeling fresh like a daisy
-        end
-        opt Extra response
-            Bob->>Alice: Thanks for asking
-        end
-
-```
+See the example below:
 
 ```mermaid
 sequenceDiagram
@@ -223,13 +156,15 @@ sequenceDiagram
         Bob->>Alice: Thanks for asking
     end
 ```
+
+
 ## Styling
 
 Styling of the a sequence diagram is done by defining a number of css classes.  During rendering these classes are extracted from the
 
 ### Classes used
 
-Class | Description
+Class        | Description
 ---          | ---
 actor        | Style for the actor box at the top of the diagram.
 text.actor   | Styles for text in the actor box at the top of the diagram.
@@ -244,11 +179,11 @@ loopLine     | Defines styles for the lines in the loop box.
 note         | Styles for the note box.
 noteText     | Styles for the text on in the note boxes.
 
+
 ### Sample stylesheet
 
 
 ```css
-
 body {
     background: white;
 }
@@ -328,17 +263,18 @@ text.actor {
     font-family: 'trebuchet ms', verdana, arial;
     font-size:14px;
 }
-
 ```
+
+
 ## Configuration
 
 Is it possible to adjust the margins for rendering the sequence diagram.
 
-This is done by defining **mermaid.sequenceConfig** or by the CLI to use a json file with the configuration.
+This is done by defining `mermaid.sequenceConfig` or by the CLI to use a json file with the configuration.
 How to use the CLI is described in the [mermaidCLI](#mermaid-cli8) page.
-**mermaid.sequenceConfig** can be set to a JSON string with config parameters or the corresponding object.
+`mermaid.sequenceConfig` can be set to a JSON string with config parameters or the corresponding object.
 
-```
+```javascript
 mermaid.sequenceConfig = {
     diagramMarginX:50,
     diagramMarginY:10,
@@ -346,7 +282,7 @@ mermaid.sequenceConfig = {
     noteMargin:10,
     messageMargin:35,
     mirrorActors:true
-    };
+};
 ```
 
 ### Possible configration params:

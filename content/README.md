@@ -1,10 +1,5 @@
----
-title: Home
-order: 0
----
+# mermaid
 
-mermaid
-=======
 ![Header Image](images/header.png)
 
 > Generation of diagrams and flowcharts from text in a similar manner as markdown.

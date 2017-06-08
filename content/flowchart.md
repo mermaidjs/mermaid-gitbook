@@ -1,9 +1,7 @@
----
-order: 3
----
-
 # Flowcharts - Basic Syntax
+
 ## Graph
+
 This statement declares a new graph and the direction of the graph layout.
 
 This declares a graph oriented from top to bottom.
@@ -40,6 +38,7 @@ graph LR
 Note that the id is what is displayed in the box.
 
 ### A node with text
+
 It is also possible to set text in the box that differs from the id. If this is done several times, it is the last text
 found for the node that will be used. Also if you define edges for the node later on, you can omit text definitions. The
 one previously defined will be used when rendering the box.
