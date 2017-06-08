@@ -51,35 +51,36 @@ locate the graphs n the page and transform them to svg files.
 
 ```html
 <link rel="stylesheet" href="mermaid.css">
-&lt;script src=&quot;mermaid.min.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
+<script src="mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
 ```
 
-Further down on your page mermaid will look for tags with ```class="mermaid"```. From these tags mermaid will try to
+Further down on your page mermaid will look for tags with `class="mermaid"`. From these tags mermaid will try to
 read the chart definiton which will be replaced with the svg chart.
 
 
 ### Define a chart like this:
 
-```
-&lt;div class=&quot;mermaid&quot;&gt;
+```html
+<div class="mermaid">
     CHART DEFINITION GOES HERE
-&lt;/div&gt;
-
+</div>
 ```
 
 Would end up like this:
-```
-&lt;div class=&quot;mermaid&quot; id=&quot;mermaidChart0&quot;&gt;
-    &lt;svg&gt;
-        Chart ends up here
-    &lt;/svg&gt;
-&lt;/div&gt;
 
+```html
+<div class="mermaid" id="mermaidChart0">
+    <svg>
+        Chart ends up here
+    </svg>
+</div>
 ```
+
 An id is also added to mermaid tags without id.
 
 ### Simple full example:
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -112,27 +113,35 @@ An id is also added to mermaid tags without id.
 </body>
 </html>
 ```
+
 ### Labels out of bounds
 
 If you use dynamically loaded fonts that are loaded through CSS, such as Google fonts, mermaid should wait for the
 whole page to have been loaded (dom + assets, particularly the fonts file).
 
+```javascript
 $(document).load(function() {
     mermaid.initialize();
 });
+```
+
 over
 
+```javascript
 $(document).ready(function() {
     mermaid.initialize();
 });
+```
 
 Not doing so will most likely result in mermaid rendering graphs that have labels out of bounds. The default integration
 in mermaid uses the window.load event to start rendering.
 
-### Calling **mermaid.init**
-By default, **mermaid.init** will be called when the document is ready, finding all elements with
-``class="mermaid"``. If you are adding content after mermaid is loaded, or otherwise need
+### Calling `mermaid.init`
+
+By default, `mermaid.init` will be called when the document is ready, finding all elements with
+`class="mermaid"`. If you are adding content after mermaid is loaded, or otherwise need
 finer-grained control of this behavior, you can call `init` yourself with:
+
 - a configuration object
 - some nodes, as
   - a node
@@ -140,49 +149,58 @@ finer-grained control of this behavior, you can call `init` yourself with:
   - or W3C selector that will find your nodes
 
 Example:
-```
+
+```javascript
 mermaid.init({noteMargin: 10}, ".someOtherClass");
 ```
+
 Or with no config object, and a jQuery selection:
-```
+
+```javascript
 mermaid.init(undefined, $("#someId .yetAnotherClass"));
 ```
 
 <aside class="warning">This type of integration is deprecated instead the preferred way of handling more complex integration is to us the mermaidAPI instead.</aside>
 
+
 ## Usage with browserify
+
 The reader is assumed to know about CommonJS style of module handling and how to use browserify. If not a good place
 to start would be http://browserify.org/ website.
 
 Minimalistic javascript:
-```
+
+```javascript
 mermaid = require('mermaid')
 console.log('Test page! mermaid version' + mermaid.version())
 ```
+
 Bundle the javascript with browserify.
 
 Us the created bundle on a web page as per example below:
+
 ```html
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;mermaid.css&quot; /&gt;
-    &lt;script src=&quot;bundle.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class=&quot;mermaid&quot;&gt;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mermaid.css" />
+    <script src="bundle.js"></script>
+</head>
+<body>
+    <div class="mermaid">
         graph LR
-            A--&gt;B
-            B--&gt;C
-            C--&gt;A
-            D--&gt;C
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+            A-->B
+            B-->C
+            C-->A
+            D-->C
+    </div>
+</body>
+</html>
 ```
 
 ## API usage
+
 The main idea with the API is to be able to call a render function with graph defintion as a string. The render function
 will render the graph and call a callback with the resulting svg code. With this approach it is up to the site creator to
 fetch the graph definition from the site, perhaps from a textarea, render it and place the graph somewhere in the site.
@@ -190,10 +208,10 @@ fetch the graph definition from the site, perhaps from a textarea, render it and
 To do this, include mermaidAPI on your web website instead of mermaid.js. The example below show an outline of how this
 could be used. The example just logs the resulting svg to the javascript console.
 
-```
-&lt;script src=&quot;mermaidAPI.js&quot;&gt;&lt;/script&gt;
+```html
+<script src="mermaidAPI.js"></script>
 
-&lt;script&gt;
+<script>
     mermaidAPI.initialize({
         startOnLoad:false
     });
@@ -208,10 +226,13 @@ could be used. The example just logs the resulting svg to the javascript console
         var graphDefinition = 'graph TB\na-->b';
         var graph = mermaidAPI.render('graphDiv', graphDefinition, insertSvg);
     });
-&lt;/script&gt;
+</script>
 ```
+
+
 ## Sample of API usage together with browserify
-```
+
+```javascript
 $ = require('jquery');
 mermaidAPI = require('mermaid').mermaidAPI;
 mermaidAPI.initialize({
@@ -227,6 +248,7 @@ $(function(){
 });
 ```
 
+
 ### Binding events
 
 Sometimes the generated graph also has defined interactions like tooltip and click events. When using the API one must
@@ -235,64 +257,66 @@ add those events after the graph has been inserted into the DOM.
 The example code below is an extract of wheat mermaid does when using the API. The example show how it is possible to
 bind events to a svg when using the API for rendering.
 
-```
-     var insertSvg = function(svgCode, bindFunctions){
-         element.innerHTML = svgCode;
-         if(typeof callback !== 'undefined'){
-             callback(id);
-         }
-         bindFunctions(element);
-     };
+```javascript
+var insertSvg = function(svgCode, bindFunctions) {
+    element.innerHTML = svgCode;
+    if(typeof callback !== 'undefined'){
+        callback(id);
+    }
+    bindFunctions(element);
+};
 
-     var id = 'theGraph';
+var id = 'theGraph';
 
 
-     mermaidAPI.render(id,txt,insertSvg, element);
+mermaidAPI.render(id,txt,insertSvg, element);
 ```
 
 1. The graph is generated using the render call.
 2. After generation the render function calls the provided callback function, in this case its called insertSvg.
-3. The callback function is called with two parameters, the svg code of the generated graph and a function. This
-function binds events to the svg **after** it is inserted into the DOM.
+3. The callback function is called with two parameters, the svg code of the generated graph and a function. This function binds events to the svg **after** it is inserted into the DOM.
 4. Insert the svg code into the DOM for presentation
 5. Call the binding function that bainds the events
+
 
 ## Example of a marked renderer
 
 This is the renderer used for transforming the documentation from markdown to html with mermaid diagrams in the html.
 
-```
-    var renderer = new marked.Renderer();
-    renderer.code = function (code, language) {
-        if(code.match(/^sequenceDiagram/)||code.match(/^graph/)){
-            return '&lt;div class="mermaid">'+code+'&lt;/div>';
-        }
-        else{
-            return '&lt;pre>&lt;code>'+code+'&lt;/code>&lt;/pre>';
-        }
-    };
+```javascript
+var renderer = new marked.Renderer();
+renderer.code = function (code, language) {
+    if(code.match(/^sequenceDiagram/)||code.match(/^graph/)){
+        return '<div class="mermaid">'+code+'</div>';
+    }
+    else{
+        return '<pre><code>'+code+'</code></pre>';
+    }
+};
 ```
 
 Another example in coffeescript that also includes the mermaid script tag into the generated markup.
-```
-marked = require &#39;marked&#39;
 
-module.exports = (options) -&gt;
+```CoffeeScript
+marked = require 'marked'
+
+module.exports = (options) ->
   hasMermaid = false
   renderer = new marked.Renderer()
   renderer.defaultCode = renderer.code
-  renderer.code = (code, language) -&gt;
-    if language is &#39;mermaid&#39;
-      html = &#39;&#39;
+  renderer.code = (code, language) ->
+    if language is 'mermaid'
+      html = ''
       if not hasMermaid
         hasMermaid = true
-        html += &#39;&amp;ltscript src=&quot;&#39;+options.mermaidPath+&#39;&quot;&gt;&lt;/script&gt;&#39;
-      html + &#39;&amp;ltdiv class=&quot;mermaid&quot;&gt;&#39;+code+&#39;&lt;/div&gt;&#39;
+        html += '<script src="'+options.mermaidPath+'"></script>'
+      html + '<div class="mermaid">'+code+'</div>'
     else
       @defaultCode(code, language)
 
   renderer
 ```
+
 
 ## Advanced usage
 
@@ -309,8 +333,7 @@ false if it is not. The parseError function will be called when the parse functi
 
 The code-example below in meta code illustrates how this could work:
 
-```js
-
+```javascript
 mermaid.parseError = function(err,hash){
     displayErrorInGui(err);
 };
@@ -326,7 +349,9 @@ var textFieldUpdated = function(){
 bindEventHandler('change', 'code', textFieldUpdated);
 ```
 
-# Configuration
+
+## Configuration
+
 Mermaid takes a number of options which lets you tweak the rendering of the diagrams. Currently there are three ways of
 setting the options in mermaid.
 
@@ -338,23 +363,24 @@ setting the options in mermaid.
 The list above has two ways to many of doing this. Three are deprecated and will eventually be removed. The list of
 configuration objects are described [in the mermaidAPI documentation](http://knsv.github.io/mermaid/index.html#configuration28).
 
-## Using the mermaidAPI.initialize/mermaid.initialize call
+
+## Using the `mermaidAPI.initialize`/`mermaid.initialize` call
 
 The future proof way of setting the configuration is by using the initialization call to mermaid or mermaidAPi depending
 on what kind of integration you use.
 
-```
-    &lt;script src=&quot;../dist/mermaid.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var config = {
-            startOnLoad:true,
-            flowchart:{
-                    useMaxWidth:false,
-                    htmlLabels:true
-            }
-        };
-        mermaid.initialize(config);
-    &lt;/script&gt;
+```html
+<script src="../dist/mermaid.js"></script>
+<script>
+    var config = {
+        startOnLoad:true,
+        flowchart:{
+            useMaxWidth:false,
+            htmlLabels:true
+        }
+    };
+    mermaid.initialize(config);
+</script>
 ```
 
 <aside class="success">This is the preferred way of configuring mermaid.</aside>
@@ -382,7 +408,7 @@ approach are:
 * mermaid_config.startOnLoad
 * mermaid_config.htmlLabels
 
-```
+```javascript
 mermaid_config.startOnLoad = true;
 ```
 
