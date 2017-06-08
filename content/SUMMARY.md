@@ -7,5 +7,6 @@
 - [Gantt diagram](gantt.md)
 - [mermaid CLI](mermaidCLI.md)
 - [Demos](demos.md)
+- [mermaidAPI](mermaidAPI.md)
 - [Development](development.md)
 - [Upgrade from version -0.4.0](upgrading.md)
