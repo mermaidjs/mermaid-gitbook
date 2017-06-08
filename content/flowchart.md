@@ -292,8 +292,10 @@ It is also possible to attach a class to a list of nodes in one statement:
 
 It is also possible to pre dine classes in css styles that can be applied from the graph definition as in the example
 below:
+
 **Example style**
-```
+
+```html
 <style>
     .cssClass > rect{
         fill:#FF0000;
@@ -302,7 +304,9 @@ below:
     }
 </style>
 ```
+
 **Example definition**
+
 ```
 graph LR;
     A-->B[AAA<span>BBB</span>];
@@ -365,7 +369,7 @@ This is done by defining **mermaid.flowchartConfig** or by the CLI to use a json
 the CLI is described in the mermaidCLI page.
 mermaid.flowchartConfig can be set to a JSON string with config parameters or the corresponding object.
 
-```
+```javascript
 mermaid.flowchartConfig = {
     width: 100%
 }
