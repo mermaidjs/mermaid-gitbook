@@ -69,16 +69,14 @@ Knut has not done all work by himself, here is the full list of the projects [co
 
 Mermaid is supported in a number of publishing systems and editors. Please report if a plugin/editor is missing from the list below:
 
-* Support in LightPaper 1.2+. [Howto](https://github.com/42Squares/LightPaper/blob/master/doc/Adding%20Mermaid%20Diagrams.md). Discout with code MERMAID_25
+* [Markdown Plus](https://mdp.tylingsoft.com/) - Markdown editor with extra features
 * [gitbook-plugin](https://github.com/JozoVilcek/gitbook-plugin-mermaid)
-* light table
 * [Confluence plugin](https://marketplace.atlassian.com/plugins/org.anvard.atlassian.mermaid-plugin/server/overview)
 * [Using mermaid via docpad](http://nauvalatmaja.com/2015/01/13/rendering-mermaid-in-docpad/)
 * [Using mermaid in Jekyll](https://rubygems.org/gems/jekyll-mermaid/versions/1.0.0)
 * [Using mermaid via Octopress](http://mostlyblather.com/blog/2015/05/23/mermaid-jekyll-octopress/)
 * [Mardown editor Haroopad](http://pad.haroopress.com/user.html)
 * [Plugin for atom](https://atom.io/packages/atom-mermaid)
-* [Markdown Plus](https://mdp.tylingsoft.com/)
 * [Vim Plugin](https://github.com/kannokanno/previm)
 * [Sphinx extension](https://github.com/mgaitan/sphinxcontrib-mermaid)
 * [Pandoc filter](https://github.com/raghur/mermaid-filter)
