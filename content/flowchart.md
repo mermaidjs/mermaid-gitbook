@@ -231,7 +231,7 @@ graph LR;
     click A callback "Tooltip"
     click B "http://www.github.com" "This is a link"
 ```
-<aside class="success">The tooltip functionality and the ability to link to urls are available from version 0.5.2.</aside>
+> **Success** The tooltip functionality and the ability to link to urls are available from version 0.5.2.
 
 When integration mermaid using the mermaidAPI #mermaidapi the function that binds the events need to be run when the finished graph has been added to the page. This is described in the [API usage](#api-usage) section.
 
@@ -313,8 +313,6 @@ graph LR;
     class A cssClass;
 ```
 
-<aside class="warning">Class definitions in the graph defnition is broken in version 0.5.1 but has been fixed in the master branch of mermaid. This fix will be included in 0.5.2</aside>
-
 
 ### Default class
 
@@ -339,8 +337,6 @@ graph TD
     B-->D(fa:fa-spinner);
     B-->E(A fa:fa-camera-retro perhaps?);
 ```
-
-<aside class="success">Support for fontawesome has been comitted to the  master branch and will be included in 0.5.3</aside>
 
 
 ## Graph declarations with spaces between vertices and link and without semicolon

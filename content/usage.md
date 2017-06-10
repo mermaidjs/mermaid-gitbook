@@ -2,38 +2,36 @@
 
 ## Installation
 
-Either use the npm or bower package managers as per below:
+### npm package
 
 ```
-bower install mermaid --save-dev
+yarn add mermaid
 ```
 
-```
-npm install mermaid --save-dev
-```
+### CDN
 
 Or download a javascript bundle and a stylesheet, e.g. the urls below are for the default style and the all-in-one javascript - note that #version# should be replaced with version of choice:
 
 ```
-https://cdn.rawgit.com/knsv/mermaid/#version#/dist/mermaid.css
-https://cdn.rawgit.com/knsv/mermaid/#version#/dist/mermaid.min.js
+https://unpkg.com/mermaid@#version#/dist/mermaid.min.css
+https://unpkg.com/mermaid@#version#/dist/mermaid.min.js
 ```
 
 Ex:
-* [js version 6.0.0](https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js)
+* [js version 7.0.3](https://unpkg.com/mermaid@7.0.3/dist/mermaid.min.js)
 
-Checkout the [latest version](https://github.com/knsv/mermaid/releases) and [other styles](https://github.com/knsv/mermaid/tree/master/dist) such as `forest` and `dark`.
+Browser all the files:
+
+https://unpkg.com/mermaid@7.0.3/dist/
+
+Please note that you can switch versions through the dropdown box on top right.
 
 There are some bundles to choose from:
+
 * mermaid.js, mermaid.min.js This bundle contains all the javascript libraries you need to run mermaid
 * mermaid.slim.js, mermaid.slim.min.js This bundle does not contain d3 which is useful for sites that already have d3 in place
 * mermaidAPI.js, mermaidAPI.min.js, This bundle does not contain the web integration provided in the other packages but has a render function instead returns svg code.
 
-
-** Important: **
-> It's best to use a specific tag or commit hash in the URL (not a branch). Files are cached permanently after the first request.
-
-Read more about that at [https://rawgit.com/](https://rawgit.com/)
 
 ## Simple usage on a web page
 
@@ -47,7 +45,7 @@ locate the graphs n the page and transform them to svg files.
 ### Include mermaid on your web page:
 
 ```html
-<link rel="stylesheet" href="mermaid.css">
+<link rel="stylesheet" href="mermaid.min.css">
 <script src="mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
 ```
@@ -81,32 +79,19 @@ An id is also added to mermaid tags without id.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <!-- Downloaded as per http://knsv.github.io/mermaid/#installation -->
-  <!-- Stored in the same directory as html file                     -->
-  <link rel="stylesheet" href="mermaid.css">
-
-  <!-- Optional to use fontawesome                                   -->
-  <!-- Downloaded as per http://fontawesome.io/get-started/          -->
-  <!-- Stored in the same directory as html file                     -->
-  <script src="https://use.fontawesome.com/7065416dc9.js"></script>
-
+  <link rel="stylesheet" href="mermaid.min.css">
 </head>
 <body>
-
-  <!-- Include mermaid on your web page:                             -->
-  <script src="mermaid.min.js"></script>
-  <script>mermaid.initialize({startOnLoad:true});</script>
-
   <div class="mermaid">
   graph LR
       A --- B
       B-->C[fa:fa-ban forbidden]
       B-->D(fa:fa-spinner);
   </div>
-
+  <script src="mermaid.min.js"></script>
+  <script>mermaid.initialize({startOnLoad:true});</script>
 </body>
 </html>
 ```
@@ -157,7 +142,12 @@ Or with no config object, and a jQuery selection:
 mermaid.init(undefined, $("#someId .yetAnotherClass"));
 ```
 
-<aside class="warning">This type of integration is deprecated instead the preferred way of handling more complex integration is to us the mermaidAPI instead.</aside>
+> **Warning** This type of integration is deprecated instead the preferred way of handling more complex integration is to us the mermaidAPI instead.
+
+
+## Usage with webpack
+
+mermaid fully supports webpack. Here is an [working demo](https://github.com/mermaidjs/mermaid-webpack-demo).
 
 
 ## Usage with browserify
@@ -213,7 +203,7 @@ could be used. The example just logs the resulting svg to the javascript console
         startOnLoad:false
     });
     $(function(){
-    // Example of using the API
+        // Example of using the API
         var element = document.querySelector("#graphDiv");
 
         var insertSvg = function(svgCode, bindFunctions){
@@ -233,13 +223,13 @@ could be used. The example just logs the resulting svg to the javascript console
 $ = require('jquery');
 mermaidAPI = require('mermaid').mermaidAPI;
 mermaidAPI.initialize({
-        startOnLoad:false
-    });
+    startOnLoad:false
+});
 
 $(function(){
     var graphDefinition = 'graph TB\na-->b';
     var cb = function(html){
-	    console.log(html);
+        console.log(html);
     }
     mermaidAPI.render('id1',graphDefinition,cb);
 });
@@ -380,7 +370,7 @@ on what kind of integration you use.
 </script>
 ```
 
-<aside class="success">This is the preferred way of configuring mermaid.</aside>
+> **Success** This is the preferred way of configuring mermaid.
 
 
 ## Using the mermaid object
@@ -395,7 +385,7 @@ approach are:
 mermaid.startOnLoad = true;
 ```
 
-<aside class="info">This way of setting the configuration is deprecated instead the preferred way of is to use the initialize method. This functionality is only kept for not breaking existing integrations</aside>
+> **Warning** This way of setting the configuration is deprecated instead the preferred way of is to use the initialize method. This functionality is only kept for not breaking existing integrations
 
 ## Using the mermaid_config
 
@@ -409,7 +399,7 @@ approach are:
 mermaid_config.startOnLoad = true;
 ```
 
-<aside class="info">This way of setting the configuration is deprecated instead the preferred way of is to use the initialize method. This functionality is only kept for not breaking existing integrations</aside>
+> **Warning** This way of setting the configuration is deprecated instead the preferred way of is to use the initialize method. This functionality is only kept for not breaking existing integrations
 
 ## Using the mermaid.init call
 
@@ -423,4 +413,4 @@ approach are:
 mermaid_config.startOnLoad = true;
 ```
 
-<aside class="info">This way of setting the configuration is deprecated instead the preferred way of is to use the initialize method. This functionality is only kept for not breaking existing integrations</aside>
+> **Warning** This way of setting the configuration is deprecated instead the preferred way of is to use the initialize method. This functionality is only kept for not breaking existing integrations

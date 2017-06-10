@@ -1,6 +1,7 @@
 {
   "plugins": [
-    "addcssjs"
+    "addcssjs",
+    "richquotes"
   ],
   "pluginsConfig": {
     "addcssjs": {
