@@ -1,25 +1,28 @@
-# Upgrading to from version -0.4.0
+# Upgrading
 
 Some of the interfaces has been upgraded.
 
 
-## Initialization
+## From version 0.4.0 to 0.5.0
+
+
+### Initialization
 
 `mermaid_config` is no longer used. Instead a call to mermaid initialize is done as in the example below:
 
 
-### version 0.4.0
+#### version 0.4.0
 
 ```javascript
 mermaid_config = {
-    startOnLoad:true
+    startOnLoad: true
 }
 ```
 
-### will look like below in version 0.5.0
+#### version 0.5.0
 
 ```javascript
 mermaid.initialize({
-    startOnLoad:true
+    startOnLoad: true
 })
 ```

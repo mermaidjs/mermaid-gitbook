@@ -10,7 +10,7 @@ yarn watch
 open http://localhost:4000
 ```
 
-Edit `markdown/images/styles` files in `content` folder.
+Edit `markdown / images / styles` files in `content` folder.
 
 
 ## Release

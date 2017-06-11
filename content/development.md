@@ -1,43 +1,18 @@
 # Development
 
+
 ## Updating the documentation
 
-## Getting the development environment up
+We write documention with GitBook.
 
-1. Fork the gh-pages branch in the the mermaid repository
-2. Do npm install
-
-
-## Working with the documentation
-
-The html files are generated from the markdown files in the docs folder.
-
-Thus ... One important thing to remember. * Do not edit the html files directly! * Those changes will be overwritten when the site is re-generated.
-
-There are some commands that are important in working with the documentation:
-
-```
-gulp site
-```
-
-This command generates html files from the markdown files in the docs folder. If you do a small fix to a markdown file,
-remember to run this command before submitting your changes as they will not be reflected in the html files if you don't.
-
-```
-gulp www
-```
-
-This command starts a small mini express server for viewing the documentation site.
+Please continue with the [mermaid-gitbook](https://github.com/mermaidjs/mermaid-gitbook) project.
 
 
-## Committing the changes
+## How to add a new diagram type
 
-Do a pull request to merge the changes to the site.
-
-
-## Things to be done in order to add a new diagram type
 
 ### Step 1: Grammar & Parsing
+
 
 #### Grammar
 
@@ -47,6 +22,7 @@ For instance:
 
 * the flowchart starts with the keyword graph.
 * the sequence diagram starts with the keyword sequenceDiagram
+
 
 #### Store data found during parsing
 
@@ -63,11 +39,11 @@ statement
 
 In the extract of the grammar above, it is defined that a call to the setTitle method in the data object will be done when parsing and the title keyword is encountered.
 
-**Note:** Make sure that the parseError function for the parser is defined and calling mermaidPAI.parseError this way a common way of detecting parse errors is provided for the end-user.
+> **Info** Make sure that the `parseError` function for the parser is defined and calling `mermaidPAI.parseError`. This way a common way of detecting parse errors is provided for the end-user.
 
 For more info look in the example diagram type:
 
-The yy object has the following function:
+The `yy` object has the following function:
 
 ```javascript
 exports.parseError = function(err, hash){
@@ -75,7 +51,7 @@ exports.parseError = function(err, hash){
 };
 ```
 
-when parsing the yy object is initialized as per below:
+when parsing the `yy` object is initialized as per below:
 
 ```javascript
 var parser
@@ -90,16 +66,19 @@ Write a renderer that given the data found during parsing renders the diagram. T
 
 Place the renderer in the diagram folder.
 
+
 ### Step 3: Detection of the new diagram type
 
 The second thing to do is to add the capability to detect the new new diagram to type to the detectType in utils.js. The detection should return a key for the new diagram type.
 
+
 ### Step 4: The final piece - triggering the rendering
 
-At this point when mermaid is trying to render the diagram, it will detect it as being of the new type but there will be no match when trying to render the diagram. To fix this add a new case in the switch statement in main.js:init this should match the diagram type returned from step number 2. The code in this new case statement should call the renderer for the diagram type with the data found by the parser as an argument.
+At this point when mermaid is trying to render the diagram, it will detect it as being of the new type but there will be no match when trying to render the diagram. To fix this add a new case in the switch statement in main.js:init this should match the diagram type returned from step #2. The code in this new case statement should call the renderer for the diagram type with the data found by the parser as an argument.
 
 
 ## Usage of the parser as a separate module
+
 
 ### Setup
 
@@ -109,11 +88,13 @@ var flow = require('./parser/flow')
 flow.parser.yy = graph
 ```
 
+
 ### Parsing
 
 ```javascript
 flow.parser.parse(text)
 ```
+
 
 ### Data extraction
 
@@ -135,4 +116,4 @@ Note that the parse needs a graph object to store the data as per:
 flow.parser.yy = graph
 ```
 
-Look at graphDb.js for more details on that object.
+Look at `graphDb.js` for more details on that object.

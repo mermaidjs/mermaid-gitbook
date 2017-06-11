@@ -9,4 +9,4 @@
 - [Demos](demos.md)
 - [mermaidAPI](mermaidAPI.md)
 - [Development](development.md)
-- [Upgrade from version -0.4.0](upgrading.md)
+- [Upgrading](upgrading.md)

@@ -1,5 +1,7 @@
 # mermaidAPI
 
+> **Warning** This file is generated automatically from the comments of [mermaidAPI.js](https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js) file. Please read that file **instead** for up-to-date information.
+
 This is the api to be used when handling the integration with the web page instead of using the default integration (mermaid.js).
 
 The core of this api is the **render** function that given a graph definitionas text renders the graph/diagram and returns a svg element for the graph. It is is then up to the user of the API to make use of the svg, either insert it somewhere in the page or something completely different.
@@ -85,17 +87,17 @@ Function returning version information
 
 ## render
 
-Function that renders an svg with a graph from a chart definition. Usage example below.
+Function that renders a svg with a graph from a chart definition. Usage example below:
 
 ```javascript
 mermaidAPI.initialize({
-    startOnLoad:true
-});
-$(function(){
-    var graphDefinition = 'graph TB\na-->b';
-    var cb = function(svgGraph){
-        console.log(svgGraph);
-    };
-    mermaidAPI.render('id1',graphDefinition,cb);
-});
+    startOnLoad: true
+})
+$(function() {
+    var graphDefinition = 'graph TB\na-->b'
+    var cb = function(svgGraph) {
+        console.log(svgGraph)
+    }
+    mermaidAPI.render('id1',graphDefinition,cb)
+})
 ```
