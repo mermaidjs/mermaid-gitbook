@@ -233,8 +233,6 @@ graph LR;
 ```
 > **Success** The tooltip functionality and the ability to link to urls are available from version 0.5.2.
 
-When integration mermaid using the mermaidAPI #mermaidapi the function that binds the events need to be run when the finished graph has been added to the page. This is described in the [API usage](#api-usage) section.
-
 
 ## Styling and classes
 
@@ -325,8 +323,7 @@ If a class is named default it will be assigned to all classes without specific 
 
 ## Basic support for fontawesome
 
-It is possible to add icons from fontawesome. In order to do so, you need to add the fontawesome as described in the instructions at
-[the fontawesome web site](https://fortawesome.github.io/Font-Awesome/).
+It is possible to add icons from fontawesome.
 
 The icons are acessed via the syntax fa:#icon class name#.
 

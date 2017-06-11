@@ -134,7 +134,7 @@ More info in: https://github.com/mbostock/d3/wiki/Time-Formatting
 
 ## Styling
 
-Styling of the a sequence diagram is done by defining a number of css classes.  During rendering these classes are extracted from the
+Styling of the a gantt diagram is done by defining a number of css classes.  During rendering these classes are extracted from the
 
 ### Classes used
 
@@ -206,10 +206,10 @@ noteText     | Styles for the text on in the note boxes.
 
 ## Configuration
 
-Is it possible to adjust the margins for rendering the sequence diagram.
+Is it possible to adjust the margins for rendering the gantt diagram.
 
-This is done by defining the `sequenceConfig` part of the configuration object. Read more about it [here](#configuration35).
-How to use the CLI is described in the [mermaidCLI](#mermaid-cli8) page.
+This is done by defining the `ganttConfig` part of the configuration object.
+How to use the CLI is described in the [mermaidCLI](mermaidCLI.html) page.
 
 mermaid.ganttConfig can be set to a JSON string with config parameters or the corresponding object.
 

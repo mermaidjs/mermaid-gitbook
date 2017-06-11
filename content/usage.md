@@ -348,7 +348,7 @@ setting the options in mermaid.
 4. Instantiation of the configuration using the **mermaid.init** call
 
 The list above has two ways to many of doing this. Three are deprecated and will eventually be removed. The list of
-configuration objects are described [in the mermaidAPI documentation](http://knsv.github.io/mermaid/index.html#configuration28).
+configuration objects are described [in the mermaidAPI documentation](mermaidAPI.html).
 
 
 ## Using the `mermaidAPI.initialize`/`mermaid.initialize` call

@@ -21,3 +21,8 @@ Make sure you have cloned [mermaid website](https://mermaidjs.github.io) to the 
 yarn release
 cd ../mermaidjs.github.io && git commit -a && git push
 ```
+
+
+## Todo
+
+- Demos page has several rendering issues
