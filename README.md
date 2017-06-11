@@ -25,5 +25,4 @@ cd ../mermaidjs.github.io && git commit -a && git push
 
 ## Todo
 
-- Demos page has several rendering issues
 - Rewrite live editor
