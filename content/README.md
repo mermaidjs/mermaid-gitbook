@@ -10,6 +10,7 @@ This is why mermaid was born, a simple markdown-like script language for generat
 
 Code examples below:
 
+
 ### An example of a flowchart
 
 ```mermaid
@@ -19,6 +20,7 @@ graph TD;
     B-->D;
     C-->D;
 ```
+
 
 ### An example of a sequence diagram
 
@@ -36,7 +38,9 @@ sequenceDiagram
     Bob-->John: Jolly good!
 ```
 
-### Example code for a gantt diagram
+
+### An example of a gantt diagram
+
 ```mermaid
 gantt
         dateFormat  YYYY-MM-DD
@@ -55,15 +59,18 @@ gantt
         Add to mermaid                      :1d
 ```
 
-Play with mermaid using this [editor](https://danielmschmidt.github.io/mermaid-demo/) or this [live editor][live_editor].
+Play with mermaid using this [live editor][live_editor].
+
 
 ## Credits
+
 Many thanks to the [d3](https://d3js.org/) and [dagre-d3](https://github.com/cpettitt/dagre-d3) projects for providing the graphical layout and drawing libraries!
 Thanks also to the [js-sequence-diagram](https://bramp.github.io/js-sequence-diagrams) project for usage of the grammar for the sequence diagrams.
 
 *Mermaid was created by Knut Sveidqvist for easier documentation.*
 
 Knut has not done all work by himself, here is the full list of the projects [contributors](https://github.com/knsv/mermaid/graphs/contributors).
+
 
 # Downstream projects
 
@@ -81,6 +88,7 @@ Mermaid is supported in a number of publishing systems and editors. Please repor
 * [Sphinx extension](https://github.com/mgaitan/sphinxcontrib-mermaid)
 * [Pandoc filter](https://github.com/raghur/mermaid-filter)
 * [hads](https://github.com/sinedied/hads)
+
 
 # Online live editor
 
