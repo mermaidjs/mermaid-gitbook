@@ -7,9 +7,9 @@
     "release": "gitbook build ./content ./www && cp -r www/* ../mermaidjs.github.io/"
   },
   "devDependencies": {
-    "gitbook-cli": "^2.3.0",
+    "gitbook-cli": "^2.3.2",
     "mermaid": "^7.0.3",
-    "standard": "^10.0.2",
-    "yarn-upgrade-all": "^0.1.5"
+    "standard": "^10.0.3",
+    "yarn-upgrade-all": "^0.1.6"
   }
 }
