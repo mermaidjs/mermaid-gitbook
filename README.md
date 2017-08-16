@@ -21,8 +21,3 @@ Make sure you have cloned [mermaid website](https://github.com/mermaidjs/mermaid
 yarn release
 cd ../mermaidjs.github.io && git commit -a && git push
 ```
-
-
-## Todo
-
-- Rewrite live editor
