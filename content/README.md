@@ -8,7 +8,11 @@ Ever wanted to simplify documentation and avoid heavy tools like Visio when expl
 
 This is why mermaid was born, a simple markdown-like script language for generating charts from text via javascript. [Try it using our editor][live-editor].
 
-Code examples below:
+
+## Request for contribution
+
+- Contribute to mermaid: https://github.com/knsv/mermaid
+- Contribute to documentation: https://github.com/mermaidjs/mermaid-gitbook
 
 
 ### An example of a flowchart
