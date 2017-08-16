@@ -88,6 +88,7 @@ Mermaid is supported in a number of publishing systems and editors. Please repor
 * [Sphinx extension](https://github.com/mgaitan/sphinxcontrib-mermaid)
 * [Pandoc filter](https://github.com/raghur/mermaid-filter)
 * [hads](https://github.com/sinedied/hads)
+* [Mermaid Preview for VS Code](https://marketplace.visualstudio.com/items?itemName=vstirbu.vscode-mermaid-preview)
 
 
 # Online live editor
