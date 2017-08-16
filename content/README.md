@@ -6,7 +6,7 @@
 
 Ever wanted to simplify documentation and avoid heavy tools like Visio when explaining your code?
 
-This is why mermaid was born, a simple markdown-like script language for generating charts from text via javascript. [Try it using our editor](http://knsv.github.io/mermaid/live_editor).
+This is why mermaid was born, a simple markdown-like script language for generating charts from text via javascript. [Try it using our editor][live-editor].
 
 Code examples below:
 
@@ -59,7 +59,7 @@ gantt
         Add to mermaid                      :1d
 ```
 
-Play with mermaid using this [live editor][live_editor].
+Play with mermaid using this [live editor][live-editor].
 
 
 ## Credits
@@ -98,6 +98,6 @@ An editor is available for creating diagrams. With it you can quickly start writ
 * get a link to a viewer of the diagram
 * get a link to edit of the diagram to share a diagram so that someone else can tweak it and send a new link back
 
-* [Editor][live_editor]
+* [Editor][live-editor]
 
-[live_editor]: https://knsv.github.io/mermaid/live_editor/
+[live-editor]: https://mermaidjs.github.io/mermaid-live-editor/
