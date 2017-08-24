@@ -2,7 +2,7 @@
 
 - [mermaid](README.md)
 - [Usage](usage.md)
-- [Flowchat](flowchart.md)
+- [Flowchart](flowchart.md)
 - [Sequence diagram](sequenceDiagram.md)
 - [Gantt diagram](gantt.md)
 - [mermaid CLI](mermaidCLI.md)
