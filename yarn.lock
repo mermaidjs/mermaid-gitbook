@@ -1757,11 +1757,11 @@ make-fetch-happen@^2.4.13:
     socks-proxy-agent "^3.0.0"
     ssri "^4.1.6"
 
-mermaid@^7.0.3:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/mermaid/-/mermaid-7.0.3.tgz#53a16fb0a6db418990287ca5908a103a73c969b1"
+mermaid@^7.0.4:
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/mermaid/-/mermaid-7.0.4.tgz#4242459bc9bd8e2e7b8c35e35f11f816f9893ba7"
   dependencies:
-    chalk "^1.1.3"
+    chalk "^2.1.0"
     d3 "3.5.17"
     dagre "^0.7.4"
     dagre-d3-renderer "0.1.6"
@@ -1770,8 +1770,8 @@ mermaid@^7.0.3:
     minimist "^1.2.0"
     mkdirp "^0.5.1"
     moment "^2.18.1"
-    semver "^5.3.0"
-    which "^1.2.14"
+    semver "^5.4.1"
+    which "^1.3.0"
 
 mime-db@~1.27.0:
   version "1.27.0"
@@ -2825,7 +2825,7 @@ semver@^4.1.0:
   version "4.3.6"
   resolved "https://registry.yarnpkg.com/semver/-/semver-4.3.6.tgz#300bc6e0e86374f7ba61068b5b1ecd57fc6532da"
 
-semver@^5.0.3, semver@^5.1.0:
+semver@^5.0.3, semver@^5.1.0, semver@^5.4.1:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.4.1.tgz#e059c09d8571f0540823733433505d3a2f00b18e"
 
@@ -3274,13 +3274,13 @@ wcwidth@^1.0.0:
   dependencies:
     defaults "^1.0.3"
 
-which@1, which@^1.2.14, which@~1.2.11, which@~1.2.14:
+which@1, which@~1.2.11, which@~1.2.14:
   version "1.2.14"
   resolved "https://registry.yarnpkg.com/which/-/which-1.2.14.tgz#9a87c4378f03e827cecaf1acdf56c736c01c14e5"
   dependencies:
     isexe "^2.0.0"
 
-which@^1.2.12, which@^1.2.9:
+which@^1.2.12, which@^1.2.9, which@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/which/-/which-1.3.0.tgz#ff04bdfc010ee547d780bec38e1ac1c2777d253a"
   dependencies:

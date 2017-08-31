@@ -1,6 +1,7 @@
 {
   "name": "mermaidjs.github.io",
   "version": "0.1.0",
+  "license": "MIT",
   "scripts": {
     "upgrade": "yarn-upgrade-all && cp node_modules/mermaid/dist/mermaid.min.js content/scripts/ && cp node_modules/mermaid/dist/mermaid.forest.min.css content/styles/",
     "watch": "gitbook serve ./content ./www",
@@ -8,7 +9,7 @@
   },
   "devDependencies": {
     "gitbook-cli": "^2.3.2",
-    "mermaid": "^7.0.3",
+    "mermaid": "^7.0.4",
     "standard": "^10.0.3",
     "yarn-upgrade-all": "^0.1.6"
   }

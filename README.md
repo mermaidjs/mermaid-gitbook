@@ -3,6 +3,13 @@
 GitBook source code for [mermaid website](https://mermaidjs.github.io).
 
 
+## Setup
+
+```
+yarn install
+```
+
+
 ## Develop
 
 ```
