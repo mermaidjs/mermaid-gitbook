@@ -27,6 +27,17 @@ sequenceDiagram
     John-->>Alice: Great!
 ```
 
+### Aliases
+
+The actor can have a convenient identifier and a descriptive label.
+
+```mermaid
+sequenceDiagram
+    participant A as Alice
+    participant J as John
+    A->>J: Hello John, how are you?
+    J->>A: Great!
+```
 
 ## Messages
 
