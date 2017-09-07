@@ -22,6 +22,8 @@ Edit `markdown / images / styles` files in `content` folder.
 
 ## Release
 
+For those who have the permission:
+
 Make sure you have cloned [mermaid website](https://github.com/mermaidjs/mermaidjs.github.io) to the same parent folder as this project.
 
 ```
