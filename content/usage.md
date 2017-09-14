@@ -10,27 +10,9 @@ yarn add mermaid
 
 ### CDN
 
-Or download a javascript bundle and a stylesheet, e.g. the urls below are for the default style and the all-in-one javascript - note that #version# should be replaced with version of choice:
-
-```
-https://unpkg.com/mermaid@#version#/dist/mermaid.min.css
-https://unpkg.com/mermaid@#version#/dist/mermaid.min.js
-```
-
-Ex:
-* [js version 7.0.3](https://unpkg.com/mermaid@7.0.3/dist/mermaid.min.js)
-
-Browser all the files:
-
-https://unpkg.com/mermaid@7.0.3/dist/
+https://unpkg.com/mermaid/
 
 Please note that you can switch versions through the dropdown box on top right.
-
-There are some bundles to choose from:
-
-* mermaid.js, mermaid.min.js This bundle contains all the javascript libraries you need to run mermaid
-* mermaid.slim.js, mermaid.slim.min.js This bundle does not contain d3 which is useful for sites that already have d3 in place
-* mermaidAPI.js, mermaidAPI.min.js, This bundle does not contain the web integration provided in the other packages but has a render function instead returns svg code.
 
 
 ## Simple usage on a web page
@@ -45,7 +27,6 @@ locate the graphs n the page and transform them to svg files.
 ### Include mermaid on your web page:
 
 ```html
-<link rel="stylesheet" href="mermaid.min.css">
 <script src="mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
 ```
@@ -147,44 +128,8 @@ mermaid.init(undefined, $("#someId .yetAnotherClass"));
 
 ## Usage with webpack
 
-mermaid fully supports webpack. Here is an [working demo](https://github.com/mermaidjs/mermaid-webpack-demo).
+mermaid fully supports webpack. Here is a [working demo](https://github.com/mermaidjs/mermaid-webpack-demo).
 
-
-## Usage with browserify
-
-The reader is assumed to know about CommonJS style of module handling and how to use browserify. If not a good place
-to start would be http://browserify.org/ website.
-
-Minimalistic javascript:
-
-```javascript
-mermaid = require('mermaid')
-console.log('Test page! mermaid version' + mermaid.version())
-```
-
-Bundle the javascript with browserify.
-
-Us the created bundle on a web page as per example below:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="mermaid.css" />
-    <script src="bundle.js"></script>
-</head>
-<body>
-    <div class="mermaid">
-        graph LR
-            A-->B
-            B-->C
-            C-->A
-            D-->C
-    </div>
-</body>
-</html>
-```
 
 ## API usage
 
@@ -214,25 +159,6 @@ could be used. The example just logs the resulting svg to the javascript console
         var graph = mermaidAPI.render('graphDiv', graphDefinition, insertSvg);
     });
 </script>
-```
-
-
-## Sample of API usage together with browserify
-
-```javascript
-$ = require('jquery');
-mermaidAPI = require('mermaid').mermaidAPI;
-mermaidAPI.initialize({
-    startOnLoad:false
-});
-
-$(function(){
-    var graphDefinition = 'graph TB\na-->b';
-    var cb = function(html){
-        console.log(html);
-    }
-    mermaidAPI.render('id1',graphDefinition,cb);
-});
 ```
 
 
