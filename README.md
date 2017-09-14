@@ -28,5 +28,5 @@ Make sure you have cloned [mermaid website](https://github.com/mermaidjs/mermaid
 
 ```
 yarn release
-cd ../mermaidjs.github.io && git commit -a && git push
+cd ../mermaidjs.github.io && git commit -a -m 'Update doc' && git push
 ```
