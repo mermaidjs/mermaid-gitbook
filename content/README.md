@@ -88,6 +88,7 @@ Mermaid is supported in a number of publishing systems and editors. Please repor
 * [Using mermaid via Octopress](http://mostlyblather.com/blog/2015/05/23/mermaid-jekyll-octopress/)
 * [Mardown editor Haroopad](http://pad.haroopress.com/user.html)
 * [Plugin for atom](https://atom.io/packages/atom-mermaid)
+* [Atom Package markdown-preview-enhanced](https://atom.io/packages/markdown-preview-enhanced)
 * [Vim Plugin](https://github.com/kannokanno/previm)
 * [Sphinx extension](https://github.com/mgaitan/sphinxcontrib-mermaid)
 * [Pandoc filter](https://github.com/raghur/mermaid-filter)
