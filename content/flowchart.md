@@ -287,7 +287,7 @@ It is also possible to attach a class to a list of nodes in one statement:
 
 ### Css classes
 
-It is also possible to pre dine classes in css styles that can be applied from the graph definition as in the example
+It is also possible to predefine classes in css styles that can be applied from the graph definition as in the example
 below:
 
 **Example style**
