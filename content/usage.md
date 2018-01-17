@@ -88,7 +88,7 @@ $(document).load(function() {
 });
 ```
 
-over
+or
 
 ```javascript
 $(document).ready(function() {
@@ -167,8 +167,8 @@ could be used. The example just logs the resulting svg to the javascript console
 Sometimes the generated graph also has defined interactions like tooltip and click events. When using the API one must
 add those events after the graph has been inserted into the DOM.
 
-The example code below is an extract of wheat mermaid does when using the API. The example show how it is possible to
-bind events to a svg when using the API for rendering.
+The example code below is an extract of what mermaid does when using the API. The example shows how it is possible to
+bind events to an svg when using the API for rendering.
 
 ```javascript
 var insertSvg = function(svgCode, bindFunctions) {
@@ -186,10 +186,10 @@ mermaidAPI.render(id,txt,insertSvg, element);
 ```
 
 1. The graph is generated using the render call.
-2. After generation the render function calls the provided callback function, in this case its called insertSvg.
+2. After generation the render function calls the provided callback function, in this case it's called insertSvg.
 3. The callback function is called with two parameters, the svg code of the generated graph and a function. This function binds events to the svg **after** it is inserted into the DOM.
 4. Insert the svg code into the DOM for presentation
-5. Call the binding function that bainds the events
+5. Call the binding function that binds the events
 
 
 ## Example of a marked renderer
