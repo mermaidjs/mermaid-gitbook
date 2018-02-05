@@ -86,8 +86,10 @@ Mermaid is supported in a number of publishing systems and editors. Please repor
 * [Using mermaid via docpad](http://nauvalatmaja.com/2015/01/13/rendering-mermaid-in-docpad/)
 * [Using mermaid in Jekyll](https://rubygems.org/gems/jekyll-mermaid/versions/1.0.0)
 * [Using mermaid via Octopress](http://mostlyblather.com/blog/2015/05/23/mermaid-jekyll-octopress/)
+* [Using mermaid via Gatsby](https://github.com/konsumer/gatsby-remark-graph)
 * [Mardown editor Haroopad](http://pad.haroopress.com/user.html)
 * [Plugin for atom](https://atom.io/packages/atom-mermaid)
+* [Atom Package markdown-preview-enhanced](https://atom.io/packages/markdown-preview-enhanced)
 * [Vim Plugin](https://github.com/kannokanno/previm)
 * [Sphinx extension](https://github.com/mgaitan/sphinxcontrib-mermaid)
 * [Pandoc filter](https://github.com/raghur/mermaid-filter)
@@ -95,6 +97,7 @@ Mermaid is supported in a number of publishing systems and editors. Please repor
 * [Mermaid Preview for VS Code](https://marketplace.visualstudio.com/items?itemName=vstirbu.vscode-mermaid-preview)
 * [Package for Sublime Text 3](https://packagecontrol.io/packages/Mermaid)
 * [MediaWiki extension](https://github.com/SemanticMediaWiki/Mermaid)
+* [StackEdit](https://stackedit.io/app)
 
 
 # Online live editor
