@@ -99,6 +99,7 @@ Mermaid is supported in a number of publishing systems and editors. Please repor
 * [MediaWiki extension](https://github.com/SemanticMediaWiki/Mermaid)
 * [StackEdit](https://stackedit.io/app)
 * [HackMd](https://hackmd.io)
+* [remark.js](https://github.com/gnab/remark/wiki/Adding-graphs-via-Mermaid)
 
 
 # Online live editor
