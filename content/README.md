@@ -98,6 +98,7 @@ Mermaid is supported in a number of publishing systems and editors. Please repor
 * [Package for Sublime Text 3](https://packagecontrol.io/packages/Mermaid)
 * [MediaWiki extension](https://github.com/SemanticMediaWiki/Mermaid)
 * [StackEdit](https://stackedit.io/app)
+* [remark.js](https://github.com/gnab/remark/wiki/Adding-graphs-via-Mermaid)
 
 
 # Online live editor
