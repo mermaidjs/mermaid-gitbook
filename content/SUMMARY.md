@@ -1,6 +1,7 @@
 # Summary
 
 - [mermaid](README.md)
+- [FAQ](faq.md)
 - [Usage](usage.md)
 - [Flowchart](flowchart.md)
 - [Sequence diagram](sequenceDiagram.md)
