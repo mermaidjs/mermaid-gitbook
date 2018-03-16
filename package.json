@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "upgrade": "yarn-upgrade-all && cp node_modules/mermaid/dist/mermaid.min.js content/scripts/ && cp node_modules/mermaid/dist/mermaid.forest.min.css content/styles/",
+    "upgrade": "yarn-upgrade-all && cp node_modules/mermaid/dist/mermaid.min.js content/scripts/",
     "watch": "gitbook serve ./content ./www",
     "release": "gitbook build ./content ./www && cp -r www/* ../mermaidjs.github.io/"
   },
   "devDependencies": {
     "gitbook-cli": "^2.3.2",
-    "mermaid": "^7.0.4",
-    "standard": "^10.0.3",
-    "yarn-upgrade-all": "^0.1.6"
+    "mermaid": "^8.0.0-beta.2",
+    "standard": "^11.0.1",
+    "yarn-upgrade-all": "^0.3.0"
   }
 }

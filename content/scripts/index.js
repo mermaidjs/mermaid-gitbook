@@ -10,6 +10,7 @@ setInterval(() => {
       node.parentNode.insertBefore(hr, node)
       node.parentNode.insertBefore(newNode, hr)
     })
+    window.mermaid.initialize({ theme: 'default' })
     window.mermaid.init(undefined, document.querySelectorAll('.lang-mermaid'))
   }
 }, 1000)
