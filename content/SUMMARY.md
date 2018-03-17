@@ -11,3 +11,4 @@
 - [mermaidAPI](mermaidAPI.md)
 - [Development](development.md)
 - [Upgrading](upgrading.md)
+- [Contribute to this website](https://github.com/mermaidjs/mermaid-gitbook)
