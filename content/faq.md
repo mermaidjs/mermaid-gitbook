@@ -4,3 +4,4 @@
 1. [How to specify gantt diagram xAxis format?](https://github.com/knsv/mermaid/issues/269#issuecomment-373229136)
 1. [How to bind an event?](https://github.com/knsv/mermaid/issues/372)
 1. [How to add newline in the text?](https://github.com/knsv/mermaid/issues/384#issuecomment-281339381)
+1. [How to have special characters in link text?](https://github.com/knsv/mermaid/issues/407#issuecomment-329944735)

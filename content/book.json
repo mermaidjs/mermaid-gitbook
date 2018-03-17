@@ -10,7 +10,6 @@
         "./scripts/index.js"
       ],
       "css": [
-        "./styles/mermaid.forest.min.css"
       ]
     }
   }
