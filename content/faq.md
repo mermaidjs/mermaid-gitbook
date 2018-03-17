@@ -5,3 +5,4 @@
 1. [How to bind an event?](https://github.com/knsv/mermaid/issues/372)
 1. [How to add newline in the text?](https://github.com/knsv/mermaid/issues/384#issuecomment-281339381)
 1. [How to have special characters in link text?](https://github.com/knsv/mermaid/issues/407#issuecomment-329944735)
+1. [How to change flowchart curve style?](https://github.com/knsv/mermaid/issues/580#issuecomment-373929046)

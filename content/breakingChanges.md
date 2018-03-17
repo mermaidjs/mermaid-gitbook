@@ -4,7 +4,7 @@
 
 ## #1
 
-```js
+```javascript
 mermaid.initialize({
     sequenceDiagram:{
         ...
@@ -14,7 +14,7 @@ mermaid.initialize({
 
 has been changed to
 
-```js
+```javascript
 mermaid.initialize({
     sequence:{
         ...
@@ -40,7 +40,7 @@ Now it is not needed to do so. And there are no more CSS files in distrubtion fi
 
 You just
 
-```js
+```javascript
 mermaid.initialize({
     theme: 'forest'
 })
