@@ -21,3 +21,31 @@ mermaid.initialize({
     }
 })
 ```
+
+## #2
+
+In old versions you need to add CSS file to your HTML:
+
+```html
+<link rel="stylesheet" href="mermaid.min.css">
+```
+
+or
+
+```html
+<link rel="stylesheet" href="mermaid.forest.min.css">
+```
+
+Now it is not needed to do so. And there are no more CSS files in distrubtion files.
+
+You just
+
+```js
+mermaid.initialize({
+    theme: 'forest'
+})
+```
+
+and it works like a charm.
+
+This is because now the CSS is inline with SVG for portability.
