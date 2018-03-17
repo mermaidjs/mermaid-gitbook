@@ -2,6 +2,7 @@
 
 - [mermaid](README.md)
 - [FAQ](faq.md)
+- [Breaking changes](breakingChanges.md)
 - [Usage](usage.md)
 - [Flowchart](flowchart.md)
 - [Sequence diagram](sequenceDiagram.md)

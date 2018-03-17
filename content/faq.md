@@ -2,3 +2,5 @@
 1. [How to specify custom CSS file?](https://github.com/mermaidjs/mermaid.cli/pull/24#issuecomment-373402785)
 1. [How to fix tooltip misplacement issue?](https://github.com/knsv/mermaid/issues/542#issuecomment-3343564621)
 1. [How to specify gantt diagram xAxis format?](https://github.com/knsv/mermaid/issues/269#issuecomment-373229136)
+1. [How to bind an event?](https://github.com/knsv/mermaid/issues/372)
+1. [How to add newline in the text?](https://github.com/knsv/mermaid/issues/384#issuecomment-281339381)
