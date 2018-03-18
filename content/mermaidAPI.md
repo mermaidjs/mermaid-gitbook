@@ -41,7 +41,7 @@ The object containing configurations specific for flowcharts
 **useMaxWidth** - Flag for setting whether or not a all available width should be used for the diagram.
 
 
-## sequenceDiagram
+## sequence
 
 The object containing configurations specific for sequence diagrams
 
