@@ -100,6 +100,7 @@ Mermaid is supported in a number of publishing systems and editors. Please repor
 * [StackEdit](https://stackedit.io/app)
 * [HackMd](https://hackmd.io)
 * [remark.js](https://github.com/gnab/remark/wiki/Adding-graphs-via-Mermaid)
+* [Typora](https://typora.io/) - Markdown editor for MacOS, Windows, and Linux
 
 
 # Online live editor
