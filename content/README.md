@@ -100,6 +100,7 @@ Mermaid is supported in a number of publishing systems and editors. Please repor
 * [StackEdit](https://stackedit.io/app)
 * [HackMd](https://hackmd.io)
 * [remark.js](https://github.com/gnab/remark/wiki/Adding-graphs-via-Mermaid)
+* [Leo Vue](https://github.com/kaleguy/leovue/wiki/Creating-Diagrams-with-Mermaid)
 
 
 # Online live editor
