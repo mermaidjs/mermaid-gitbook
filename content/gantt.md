@@ -3,24 +3,8 @@
 > A Gantt chart is a type of bar chart, first developed by Karol Adamiecki in 1896, and independently by Henry Gantt in the 1910s, that illustrates a project schedule. Gantt charts illustrate the start and finish dates of the terminal elements and summary elements of a project.
 
 Mermaid can render Gantt diagrams.
-
-```mermaid
-gantt
-    title A Gantt Diagram
-    dateFormat  YYYY-MM-DD
-    section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
-    section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
-```
-
-
-## Syntax
-
-```mermaid
-gantt
+ ```mermaid
+ gantt
        dateFormat  YYYY-MM-DD
        title Adding GANTT diagram functionality to mermaid
 
@@ -49,14 +33,53 @@ gantt
        Add another diagram to demo page    :48h
    ```
 
+
+## Syntax
+
+A task is defined by an ID, a start date, and either an end date or duration.
+If a task depends on an other task, a begin date is not required.
+
+By default, a task is added just after the previous task, see Task 2 below. In this way, Task 2 becomes a dependency of Task 1. You can also explicitly give a dependency using the id of the prerequisite, see Task 3.
+
+```mermaid
+gantt
+
+    Task 1           :a1, 2014-01-01, 2014-01-30
+    Task 2           :15d
+    Task 3           :after a1, 15d
+```
+
 ### Title
 
-Tbd
+Add a title above the diagram.
+
+```mermaid
+gantt
+    title A Gantt Diagram
+
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+
+
+```
 
 
 ## Sections statements
 
-Tbd
+You can divide the gantt diagram into sections.
+
+```mermaid
+gantt
+    title A Gantt Diagram
+
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+
+    section Another Section
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+```
 
 
 ## Setting dates
