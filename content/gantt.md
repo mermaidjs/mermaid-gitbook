@@ -61,13 +61,39 @@ Tbd
 
 ## Setting dates
 
-Tbd
 
+You can set date formats.
 
 ### Date format
 
-Tbd
+You can set the date format in the mermaid script.
 
+The default date format is ```YYYY-MM-DD```. In the example below, the date format is changed to ```DD-MM-YYYY```.
+
+```mermaid
+gantt
+    title A Gantt Diagram
+    dateFormat  DD-MM-YYYY
+
+    A task           :a1, 01-01-2014, 30d
+    Another task     :after a1  , 20d
+```
+
+### Axis date format
+
+You can set the date format on the horizontal axis of the Gantt diagram.
+
+In the example below, the date format displayed on the horizontal axis is ```%m/%d/%Y```.
+
+```mermaid
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    axisFormat  %m/%d/%Y
+
+    A task           :a1, 01-01-2014, 30d
+    Another task     :after a1  , 20d
+```
 
 ### Diagram definition
 
