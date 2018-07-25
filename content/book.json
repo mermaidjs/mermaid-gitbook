@@ -10,6 +10,7 @@
         "./scripts/index.js"
       ],
       "css": [
+        "./styles/website.css"
       ]
     }
   }
