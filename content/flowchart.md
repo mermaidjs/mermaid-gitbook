@@ -200,36 +200,46 @@ graph TB
 It is possible to bind a click event to a node, the click can lead to either a javascript callback or to a link which will be opened in a new browser tab.
 
 ```
-click nodeId callback
+click nodeId callbackFunction "Tooltip text"
+click nodeId link "Tooltip text"
 ```
 
-* nodeId is the id of the node
-* callback is the name of a javascript function defined on the page displaying the graph, the function will be called with the nodeId as parameter.
+* `nodeId` - id of the node
+* `callbackFunction` - name of a javascript function defined on the page displaying the graph. The function will be called with the `nodeId` as parameter.
+* `link` - url of the page that will open in a new browser tab
+* `"Tooltip text"` (optional) - text that will display in the tooltip when hovering over the node. It must be defined in quotes. Tooltip styling is not set by default but can be defined with the class `.mermaidTooltip`, such as:
+  ```
+    .mermaidTooltip {
+      position: absolute;
+      text-align: center;
+      max-width: 200px;
+      padding: 2px;
+      font-family: 'trebuchet ms', verdana, arial;
+      font-size: 12px;
+      background: #ffffde;
+      border: 1px solid #aaaa33;
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 100;
+    }
+  ```
 
-Examples of tooltip usage below:
+### Examples:
 
 ```
+# Example of a callback function to be defined on the page.
 <script>
-    var callback = function(){
+    var callbackFunction = function(nodeId){
         alert('A callback was triggered');
     }
-<script>
+</script>
 ```
-
-```
-graph LR;
-    A-->B;
-    click A callback "Tooltip for a callback"
-    click B "http://www.github.com" "This is a tooltip for a link"
-```
-
-The tooltip text is surrounded in double quotes. The styles of the tooltip are set by the class .mermaidTooltip.
 
 ```mermaid
-graph LR;
-    A-->B;
-    click A callback "Tooltip"
-    click B "http://www.github.com" "This is a link"
+    graph LR;
+      A-->B;
+      click A callbackFunction "Tooltip for a callback"
+      click B "http://www.github.com" "This is a tooltip for node that will open a new window on click"
 ```
 > **Success** The tooltip functionality and the ability to link to urls are available from version 0.5.2.
 
