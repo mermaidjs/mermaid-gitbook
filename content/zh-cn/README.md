@@ -1,23 +1,24 @@
-# mermaid
+# mermaid 中文说明
 
-![Header Image](images/header.png)
+![头图](../images/header.png)
 
-如果您是中文用户，[这里有中文翻译](zh-cn/README.md)供您快速入门。
+> 使用 Markdown 风格用文本生成图表和流程图
 
-> Generation of diagrams and flowcharts from text in a similar manner as markdown.
+有没有想过使用简单的方式去描述你的代码？避免使用类似 Visio 等这样臃肿的工具。
 
-Ever wanted to simplify documentation and avoid heavy tools like Visio when explaining your code?
-
-This is why mermaid was born, a simple markdown-like script language for generating charts from text via javascript. [Try it using our editor][live-editor].
+这就是为什么设计 mermaid 的初衷，它能够通过 javascript 让您使用类似 Markdown 风格的脚本语言生成图表。您可以试试我们的[在线编辑器][live-editor]。
 
 
-## Request for contribution
+## 感谢您来贡献
 
-- Contribute to mermaid: https://github.com/knsv/mermaid
-- Contribute to documentation: https://github.com/mermaidjs/mermaid-gitbook
+mermaid 正在开发中，还有很多不足以及需要增强的功能，我们欢迎您也加入我们：
 
+- 给 mermaid 贡献代码: https://github.com/knsv/mermaid
+- 贡献文档: https://github.com/mermaidjs/mermaid-gitbook
 
-### An example of a flowchart
+PS，这篇简体中文的文档翻译者是[明城](https://www.gracecode.com)，如果您有任何的意见和建议，可以直接邮件联系 `echo bWluZ2NoZW5nQG91dGxvb2suY29tCg== | base64 -d` ,非常感谢！
+
+### 流程图的例子
 
 ```mermaid
 graph TD;
@@ -28,7 +29,7 @@ graph TD;
 ```
 
 
-### An example of a sequence diagram
+### 序列图的例子
 
 ```mermaid
 sequenceDiagram
@@ -45,7 +46,7 @@ sequenceDiagram
 ```
 
 
-### An example of a gantt diagram
+### 甘特图的例子
 
 ```mermaid
 gantt
@@ -65,24 +66,20 @@ gantt
         Add to mermaid                      :1d
 ```
 
-Play with mermaid using this [live editor][live-editor].
+您可以使用[在线编辑器][live-editor]尝试下。
 
+## 作者
 
-## Credits
+非常感谢  [d3](https://d3js.org/) 以及 [dagre-d3](https://github.com/cpettitt/dagre-d3) 项目库提供了视图层以及绘画层的支持。同时也感谢  [js-sequence-diagram](https://bramp.github.io/js-sequence-diagrams) 项目提供了对序列图的语法支持。
 
-Many thanks to the [d3](https://d3js.org/) and [dagre-d3](https://github.com/cpettitt/dagre-d3) projects for providing the graphical layout and drawing libraries!
-Thanks also to the [js-sequence-diagram](https://bramp.github.io/js-sequence-diagrams) project for usage of the grammar for the sequence diagrams.
+*同时也感谢 Knut Sveidqvist  为 Mermaid 编写了更容易理解的文档。* Knut 并不是一个人在战斗，这里有个他的[项目列表](https://github.com/knsv/mermaid/graphs/contributors)，
+欢迎您的加入！
 
-*Mermaid was created by Knut Sveidqvist for easier documentation.*
+# 下游项目
 
-Knut has not done all work by himself, here is the full list of the projects [contributors](https://github.com/knsv/mermaid/graphs/contributors).
+Mermaid 支持了数种发布系统以及编辑器，请参阅下方的列表以及提出如果列表中没有的项目：
 
-
-# Downstream projects
-
-Mermaid is supported in a number of publishing systems and editors. Please report if a plugin/editor is missing from the list below:
-
-* [Markdown Plus](https://mdp.tylingsoft.com/) - Markdown editor with extra features
+* [Markdown Plus](https://mdp.tylingsoft.com/) - Markdown 编辑器以及支持多种扩展功能；
 * [gitbook-plugin](https://github.com/JozoVilcek/gitbook-plugin-mermaid)
 * [Confluence plugin](https://marketplace.atlassian.com/plugins/org.anvard.atlassian.mermaid-plugin/server/overview)
 * [Using mermaid via docpad](http://nauvalatmaja.com/2015/01/13/rendering-mermaid-in-docpad/)
@@ -103,16 +100,15 @@ Mermaid is supported in a number of publishing systems and editors. Please repor
 * [HackMd](https://hackmd.io)
 * [remark.js](https://github.com/gnab/remark/wiki/Adding-graphs-via-Mermaid)
 * [Leo Vue](https://github.com/kaleguy/leovue/wiki/Creating-Diagrams-with-Mermaid)
-* [Typora](https://typora.io/) - Markdown editor for MacOS, Windows, and Linux
+* [Typora](https://typora.io/) - 跨平台的 Markdown 编辑器。
 
+# 在线编辑器
 
-# Online live editor
+这里有个在线编辑器可以供您制作图表，同时您也可以快速了解 Mermaid 的些特性。它提供了：
 
-An editor is available for creating diagrams. With it you can quickly start writing mermaid diagrams. It is possible to:
-
-* save the result as a svg
-* get a link to a viewer of the diagram
-* get a link to edit of the diagram to share a diagram so that someone else can tweak it and send a new link back
+* 保存图表为 svg 格式；
+* 通过链接查看指定的图表；
+* 通过链接可以编辑、分享图表，同时其他人也可以调整以及生成新的连接。
 
 * [Editor][live-editor]
 

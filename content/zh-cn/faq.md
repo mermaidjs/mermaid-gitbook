@@ -1,0 +1,8 @@
+-  [如何给流程图加入标题？](https://github.com/knsv/mermaid/issues/556#issuecomment-363182217)
+-  [如何指定定制的 CSS 样式？](https://github.com/mermaidjs/mermaid.cli/pull/24#issuecomment-373402785)
+-  [如何解决 tooltip 信息丢失的问题？](https://github.com/knsv/mermaid/issues/542#issuecomment-3343564621)
+-  [如何制定甘特图位 xAxis 格式？](https://github.com/knsv/mermaid/issues/269#issuecomment-373229136)
+-  [如何绑定一个事件？](https://github.com/knsv/mermaid/issues/372)
+-  [如何在文本中插入新的一行？](https://github.com/knsv/mermaid/issues/384#issuecomment-281339381)
+-  [如何在连接中插入特殊字符？](https://github.com/knsv/mermaid/issues/407#issuecomment-329944735)
+-  [如何改流程图的箭头角标？](https://github.com/knsv/mermaid/issues/580#issuecomment-373929046)

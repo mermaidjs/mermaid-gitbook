@@ -24,7 +24,7 @@
 - [甘特图](zh-cn/gantt.md)
 - [命令行](zh-cn/mermaidCLI.md)
 - [例子](zh-cn/demos.md)
-- [接口](zh-cn/mermaidAPI.md)
+- [接口（mermaidAPI）](zh-cn/mermaidAPI.md)
 - [开发](zh-cn/development.md)
 - [升级](zh-cn/upgrading.md)
 
