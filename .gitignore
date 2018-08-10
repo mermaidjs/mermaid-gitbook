@@ -1,2 +1,5 @@
 node_modules/
 www/
+_book/
+*.log
+/yarn.lock
