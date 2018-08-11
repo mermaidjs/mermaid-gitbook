@@ -13,7 +13,7 @@
 - [Development](development.md)
 - [Upgrading](upgrading.md)
 
-## 简体中文版
+# 简体中文版
 
 - [介绍](zh-cn/README.md)
 - [一般问题](zh-cn/faq.md)
