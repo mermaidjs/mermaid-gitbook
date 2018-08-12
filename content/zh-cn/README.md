@@ -14,9 +14,10 @@
 mermaid 正在开发中，还有很多不足以及需要增强的功能，我们欢迎您也加入我们：
 
 - 给 mermaid 贡献代码: https://github.com/knsv/mermaid
-- 贡献文档: https://github.com/mermaidjs/mermaid-gitbook
+- 贡献文档: https://github.com/feelinglucky/mermaid-gitbook-zh
 
-PS，这篇简体中文的文档翻译者是[明城](https://www.gracecode.com)，如果您有任何的意见和建议，可以直接邮件联系 `echo bWluZ2NoZW5nQG91dGxvb2suY29tCg== | base64 -d` ,非常感谢！
+> 这篇文档简体中文版本的翻译者是[明城](https://www.gracecode.com)，如果您有任何的意见和建议，可以直接邮件联系 `echo bWluZ2NoZW5nQG91dGxvb2suY29tCg== | base64 -d` ,非常感谢！
+
 
 ### 流程图的例子
 
@@ -27,7 +28,6 @@ graph TD;
     B-->D;
     C-->D;
 ```
-
 
 ### 序列图的例子
 
@@ -44,7 +44,6 @@ sequenceDiagram
     John->Bob: How about you?
     Bob-->John: Jolly good!
 ```
-
 
 ### 甘特图的例子
 
@@ -67,6 +66,7 @@ gantt
 ```
 
 您可以使用[在线编辑器][live-editor]尝试下。
+
 
 ## 作者
 
@@ -101,6 +101,7 @@ Mermaid 支持了数种发布系统以及编辑器，请参阅下方的列表以
 * [remark.js](https://github.com/gnab/remark/wiki/Adding-graphs-via-Mermaid)
 * [Leo Vue](https://github.com/kaleguy/leovue/wiki/Creating-Diagrams-with-Mermaid)
 * [Typora](https://typora.io/) - 跨平台的 Markdown 编辑器。
+
 
 # 在线编辑器
 

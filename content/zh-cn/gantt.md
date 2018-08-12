@@ -1,10 +1,10 @@
-# Gantt diagrams 甘特图
+# 甘特图
 
-> A Gantt chart is a type of bar chart, first developed by Karol Adamiecki in 1896, and independently by Henry Gantt in the 1910s, that illustrates a project schedule. Gantt charts illustrate the start and finish dates of the terminal elements and summary elements of a project.
+**Notice** 译者注：原作者没有写完这块，考虑是否扩写。
 
-> 甘特图是一种柱状图，用来描述项目的安排和进展，最先是 Karol Adamiecki 开发但早在1910s 年代  Henry Gantt 提出了这个构想。甘特图说明了项目的开始以及结束时间，同时描述了对应的具体事项。
+> 甘特图是一种柱状图，用来描述项目的安排和进展。最先是在 1910s 年代  Henry Gantt 提出了这个构想和概念，然后在 1986 年 Karol Adamiecki 开发了最早的版本。甘特图描述了段项目时间内的对应的具体事项的进度和安排。
 
-Mermaid can render Gantt diagrams. Mermaid 可以制作甘特图。
+Mermaid 可以制作甘特图，下面是个完整的实例：
 
 ```mermaid
 gantt
@@ -19,7 +19,7 @@ gantt
 ```
 
 
-## Syntax 语法
+## 语法
 
 ```mermaid
 gantt
@@ -51,29 +51,29 @@ gantt
        Add another diagram to demo page    :48h
    ```
 
-### Title 标题
+### 标题
 
 Tbd
 
 
-## Sections statements 节点语句
+## 节点语句
 
 Tbd
 
 
-## Setting dates 配置日期
+## 配置日期
 
 Tbd
 
 
-### Date format 日期格式
+### 日期格式
 
 Tbd
 
 
-### Diagram definition 定义图表
+### 定义图表
 
-Input	Example	Description:
+输入	描述:
 
 ```
 YYYY	2014	4 digit year
@@ -99,10 +99,10 @@ SSS	0..999	Thousandths of a second
 Z ZZ	+12:00	Offset from UTC as +-HH:mm, +-HHmm, or Z
 ```
 
-More info in: http://momentjs.com/docs/#/parsing/string-format/
+更多信息请参见： http://momentjs.com/docs/#/parsing/string-format/
 
 
-### Scale 比例
+### 比例
 
 ```
 %a - abbreviated weekday name.
@@ -131,16 +131,16 @@ More info in: http://momentjs.com/docs/#/parsing/string-format/
 %% - a literal "%" character.
 ```
 
-More info in: https://github.com/mbostock/d3/wiki/Time-Formatting
+更多信息请参见： https://github.com/mbostock/d3/wiki/Time-Formatting
 
 
-## Styling 样式
+## 样式
 
-Styling of the a gantt diagram is done by defining a number of css classes.  During rendering these classes are extracted from the
+可以定义甘特图的多种 CSS 样式，下面是一份具体的列表：
 
 ### Classes used 已定义的样式类
 
-Class 类名称 | Description 描述
+类名称 | 描述
 ---          | ---
 actor        | Style for the actor box at the top of the diagram.
 text.actor   | Styles for text in the actor box at the top of the diagram.
@@ -155,8 +155,8 @@ loopLine     | Defines styles for the lines in the loop box.
 note         | Styles for the note box.
 noteText     | Styles for the text on in the note boxes.
 
-### Sample stylesheet 样式例子
 
+### 样式例子
 
 ```css
 .grid .tick {
@@ -205,15 +205,9 @@ noteText     | Styles for the text on in the note boxes.
 }
 ```
 
+## 配置
 
-## Configuration 配置
-
-Is it possible to adjust the margins for rendering the gantt diagram.
-
-This is done by defining the `ganttConfig` part of the configuration object.
-How to use the CLI is described in the [mermaidCLI](mermaidCLI.html) page.
-
-mermaid.ganttConfig can be set to a JSON string with config parameters or the corresponding object.
+可以调整甘特图边距等配置的渲染信息。具体的配置可以使用配置对象的 `ganttConfig` 节点，有关如何使用命令行配置参考  [mermaidCLI](zh-cn/mermaidCLI.md) 页面。`mermaid.ganttConfig` 可以传入 JSON 字符串配置参数或者对应的对象类型。
 
 ```javascript
 mermaid.ganttConfig = {
@@ -225,9 +219,9 @@ mermaid.ganttConfig = {
 }
 ```
 
-### Possible configration params: 配置的参数
+### 配置的参数
 
-Param | Descriotion | Default value
+参数 | 定义 |  默认值
 --- | --- | ---
-mirrorActor|Turns on/off the rendering of actors below the diagram as well as above it|false
-bottomMarginAdj|Adjusts how far down the graph ended. Wide borders styles with css could generate unwantewd clipping which is why this config param exists.|1
+mirrorActor| 关闭或者打开操作者（Actors）在图中是否被覆盖|false
+bottomMarginAdj|调整图的下部边距，因为可能设置的样式边框过粗会超出边距，因此在实际情况中需要做适当的调整。|1
