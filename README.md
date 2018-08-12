@@ -1,7 +1,6 @@
-# mermaid-gitbook
+# mermaid-gitbook([Chinese Edition](content/zh-cn/README.md))
 
 GitBook source code for [mermaid website](https://mermaidjs.github.io).
-
 
 ## Setup
 
@@ -9,6 +8,11 @@ GitBook source code for [mermaid website](https://mermaidjs.github.io).
 yarn install
 ```
 
+If you doesn't insatll `gitbook`, pls install it by your self. then execute:
+
+```
+cd content && gitbook update
+```
 
 ## Develop
 
