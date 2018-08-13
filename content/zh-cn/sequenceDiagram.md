@@ -1,6 +1,6 @@
 # 序列图
 
-> 序列图是用来描述对象之间消息顺序的图（详细可以参见 https://en.wikipedia.org/wiki/Sequence_diagram ）
+> 序列图是用来描述对象之间消息顺序的图（详细可以参见 [维基百科](https://en.wikipedia.org/wiki/Sequence_diagram) ）
 
 Mermaid 可以用来生成序列图，下面是个完整的例子：
 
@@ -14,7 +14,9 @@ sequenceDiagram
 
 ### 参与者
 
-参与者的定义可以类似第一个例子中隐式的声明定义。参与者或者执行者可以在源代码定义中按照顺序渲染出来。有时候你想显示参与者为不同的顺序，而不是像第一个例子一样顺序输出。那么你可以如下显示声明参与者的顺序：
+参与者的定义可以和首个例子中隐式的声明定义，这样参与者或者执行者会在源代码定义中按照顺序渲染。
+
+有时候想显示参与者为不同的顺序，而不是和上述例子中一样顺序输出。那么你可以如下显示声明参与者的顺序：
 
 ```mermaid
 sequenceDiagram
@@ -38,7 +40,7 @@ sequenceDiagram
 
 ## 信息
 
-信息可以使用虚线以及实线两者来标注。
+信息可以使用虚线以及实线来链接和标注，具体的语法参见：
 
 ```
 [Actor][Arrow][Actor]:Message text
@@ -60,7 +62,7 @@ sequenceDiagram
 
 同时，支持描述是否激活（activate）制定的参与者。描述是否激活可以这样子定义：
 
-> *Warning* 译者注：这里的表述可能会有些混淆，[根据 MSDN 的描述是「执行匹配项」](https://msdn.microsoft.com/zh-cn/library/dd409377.aspx)。所以这里具体会意即可，根据事情情况使用。
+> **Warning** 译者注：这里的表述可能会有些混淆，[根据 MSDN 的描述是「执行匹配项」](https://msdn.microsoft.com/zh-cn/library/dd409377.aspx)。
 
 ```mermaid
 sequenceDiagram
@@ -130,7 +132,6 @@ sequenceDiagram
     end
 ```
 
-
 ## 分支（Alt）
 
 支持在图表中描述选择，它使用标注定义：
@@ -166,12 +167,11 @@ sequenceDiagram
     end
 ```
 
-
 ## 样式化
 
 序列图支持多种节点样式的自定义，下面是具体的样式类。
 
-### Classes used 已经使用的样式类
+### 已经使用的样式类
 
 样式类      | 描述
 ---          | ---

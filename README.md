@@ -8,7 +8,7 @@ GitBook source code for [mermaid website](https://mermaidjs.github.io).
 yarn install
 ```
 
-If you doesn't insatll `gitbook`, pls install it by your self. then execute:
+If you doesn't install `gitbook`, install it by your self. then execute:
 
 ```
 cd content && gitbook update
