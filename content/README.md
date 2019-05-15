@@ -102,6 +102,7 @@ Mermaid is supported in a number of publishing systems and editors. Please repor
 * [remark.js](https://github.com/gnab/remark/wiki/Adding-graphs-via-Mermaid)
 * [Leo Vue](https://github.com/kaleguy/leovue/wiki/Creating-Diagrams-with-Mermaid)
 * [Typora](https://typora.io/) - Markdown editor for MacOS, Windows, and Linux
+* [CodiMD](https://github.com/codimd/server) Open Source Online Markdown Editor
 
 
 # Online live editor
