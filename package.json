@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "gitbook-cli": "^2.3.2",
-    "mermaid": "^8.0.0-rc.6",
+    "mermaid": "^8.2.3",
     "standard": "^11.0.1",
     "yarn-upgrade-all": "^0.3.0"
   }
