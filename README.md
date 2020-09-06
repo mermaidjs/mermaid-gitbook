@@ -1,3 +1,6 @@
+
+# Documentation has been moved to docs in https://github.com/mermaid-js/mermaid
+
 # mermaid-gitbook
 
 GitBook source code for [mermaid website](https://mermaidjs.github.io).
