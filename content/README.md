@@ -102,6 +102,7 @@ Mermaid is supported in a number of publishing systems and editors. Please repor
 * [remark.js](https://github.com/gnab/remark/wiki/Adding-graphs-via-Mermaid)
 * [Leo Vue](https://github.com/kaleguy/leovue/wiki/Creating-Diagrams-with-Mermaid)
 * [Typora](https://typora.io/) - Markdown editor for MacOS, Windows, and Linux
+* [react-diagram-webparts](https://github.com/hugoabernier/react-diagram-webparts) - Mermaid web part for SharePoint and Office 365.
 
 
 # Online live editor
