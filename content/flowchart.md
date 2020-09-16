@@ -13,6 +13,11 @@ graph TD
 
 This declares a graph oriented from left to right.
 
+```mermaid
+graph LR
+    Start --> Stop
+```
+
 Possible directions are:
 
 * TB - top bottom
@@ -21,11 +26,6 @@ Possible directions are:
 * LR - left right
 
 * TD - same as TB
-
-```mermaid
-graph LR
-    Start --> Stop
-```
 
 ## Nodes & shapes
 
