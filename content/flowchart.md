@@ -78,6 +78,23 @@ graph LR
     id1{This is the text in the box}
 ```
 
+### A node (trapezoids)
+
+```mermaid
+graph LR
+    id1[/This is the text in the box\]
+    id2[\This is the text in the box/]
+```
+
+
+### A node (parallelograms)
+
+```mermaid
+graph LR
+    id1[/This is the text in the box/]
+    id2[\This is the text in the box\]
+```
+
 ## Links between nodes
 
 Nodes can be connected with links/edges. It is possible to have different types of links or attach a text string to a link.
