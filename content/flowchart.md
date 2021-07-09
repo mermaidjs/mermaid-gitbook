@@ -262,6 +262,8 @@ graph LR
 
 #### Classes
 
+> **Success** The `classDef` functionality is available through version 7.0.14 and from version 8.0.0-alpha.9. It does not work in versions 7.0.15 through 8.0.0-alpha.8
+
 More convenient then defining the style every time is to define a class of styles and attach this class to the nodes that
 should have a different look.
 
