@@ -56,12 +56,14 @@ Tbd
 
 ## Sections statements
 
-Tbd
-
+Tasks can be grouped into sections with a `section` statement.
+A `section Section Name` statement will place all the following tasks into that section.
 
 ## Setting dates
 
-Tbd
+There is no functionality to control "today" value for a Gantt chart's indicator.
+
+Instead of `after des2, 5d` a task can have a beginning date and an ending date explicitly set.
 
 
 ### Date format
