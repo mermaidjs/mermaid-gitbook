@@ -171,7 +171,7 @@ sequenceDiagram
 
 ## Styling
 
-Styling of the a sequence diagram is done by defining a number of css classes.  During rendering these classes are extracted from the
+Styling of the a sequence diagram is done by defining a number of css classes.  During rendering these classes are extracted from the diagram.
 
 ### Classes used
 
