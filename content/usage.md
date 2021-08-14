@@ -21,8 +21,8 @@ The easiest way to integrate mermaid on a web page requires two elements:
 1. Inclusion of the mermaid framework in the html page using a script tag
 2. A graph definition on the web page
 
-If these things are in place mermaid listens to the page load event and when fires, when the page has loaded, it will
-locate the graphs n the page and transform them to svg files.
+If these things are in place mermaid listens to the page load event and when the page has loaded, it will
+locate the graphs in the page and transform them to svg files.
 
 ### Include mermaid on your web page:
 
@@ -53,7 +53,7 @@ Would end up like this:
 </div>
 ```
 
-An id is also added to mermaid tags without id.
+An id is also added to mermaid tags without an id.
 
 ### Simple full example:
 
@@ -123,7 +123,7 @@ Or with no config object, and a jQuery selection:
 mermaid.init(undefined, $("#someId .yetAnotherClass"));
 ```
 
-> **Warning** This type of integration is deprecated instead the preferred way of handling more complex integration is to us the mermaidAPI instead.
+> **Warning** This type of integration is deprecated instead the preferred way of handling more complex integration is to use the mermaidAPI instead.
 
 
 ## Usage with webpack
@@ -265,15 +265,15 @@ bindEventHandler('change', 'code', textFieldUpdated);
 
 ## Configuration
 
-Mermaid takes a number of options which lets you tweak the rendering of the diagrams. Currently there are three ways of
-setting the options in mermaid.
+Mermaid takes a number of options which lets you tweak the rendering of the diagrams. Currently there are four ways of
+setting the options in mermaid:
 
 1. Instantiation of the configuration using the initialize call
 2. *Using the global mermaid object* - deprecated
 3. *using the global mermaid_config object* - deprecated
 4. Instantiation of the configuration using the **mermaid.init** call
 
-The list above has two ways to many of doing this. Three are deprecated and will eventually be removed. The list of
+The list above has three ways too many of doing this. Three are deprecated and will eventually be removed. The list of
 configuration objects are described [in the mermaidAPI documentation](mermaidAPI.html).
 
 
@@ -311,7 +311,7 @@ approach are:
 mermaid.startOnLoad = true;
 ```
 
-> **Warning** This way of setting the configuration is deprecated instead the preferred way of is to use the initialize method. This functionality is only kept for not breaking existing integrations
+> **Warning** This way of setting the configuration is deprecated. Instead the preferred way is to use the initialize method. This functionality is only kept to avoid breaking existing integrations.
 
 ## Using the mermaid_config
 
@@ -325,7 +325,7 @@ approach are:
 mermaid_config.startOnLoad = true;
 ```
 
-> **Warning** This way of setting the configuration is deprecated instead the preferred way of is to use the initialize method. This functionality is only kept for not breaking existing integrations
+> **Warning** This way of setting the configuration is deprecated. Instead the preferred way is to use the initialize method. This functionality is only kept to avoid breaking existing integrations.
 
 ## Using the mermaid.init call
 
@@ -339,4 +339,4 @@ approach are:
 mermaid_config.startOnLoad = true;
 ```
 
-> **Warning** This way of setting the configuration is deprecated instead the preferred way of is to use the initialize method. This functionality is only kept for not breaking existing integrations
+> **Warning** This way of setting the configuration is deprecated. Instead the preferred way is to use the initialize method. This functionality is only kept to avoid breaking existing integrations.
