@@ -23,6 +23,19 @@ For instance:
 * the flowchart starts with the keyword graph.
 * the sequence diagram starts with the keyword sequenceDiagram
 
+### Generate the Parser object
+To generate the Parser object for your [jison](http://zaa.ch/jison/) grammar file execute the following command:
+
+```
+yarn jison
+```
+
+> Note: On Windows you may need to change the Gulp configuration. If you're getting errors, try replacing the jison script in your package.json file:
+> ```json
+> "jison": "node -r babel-register node_modules/gulp/bin/gulp.js jison",
+> ```
+
+Once the command finishes, you should see a new .js file in your diagram type folder.
 
 #### Store data found during parsing
 
@@ -59,7 +72,6 @@ parser = exampleParser.parser
 parser.yy = db
 ```
 
-
 ### Step 2: Rendering
 
 Write a renderer that given the data found during parsing renders the diagram. To look at an example look at sequendeRenderer.js rather then the flowchart renderer as this is a more generic example.
@@ -74,8 +86,44 @@ The second thing to do is to add the capability to detect the new new diagram to
 
 ### Step 4: The final piece - triggering the rendering
 
-At this point when mermaid is trying to render the diagram, it will detect it as being of the new type but there will be no match when trying to render the diagram. To fix this add a new case in the switch statement in main.js:init this should match the diagram type returned from step #2. The code in this new case statement should call the renderer for the diagram type with the data found by the parser as an argument.
-
+At this point when mermaid is trying to render the diagram, it will detect it as being of the new type but there will be no match when trying to render the diagram. To fix this update the mermaidAPI.js file with the following changes:
+1. Add a reference to your own Renderer, Parser and DB. For example, if your new diagram type is ``chen`` you will get something like:  
+   ```javascript
+   import chenRenderer from './diagrams/chen/chenRenderer'
+   import chenParser from './diagrams/chen/parser/chen'
+   import chenDb from './diagrams/chen/chenDb'
+   ```
+1. Update the configuration for your diagram type, by adding a new property to the ``config`` object. For example:
+   ```javascript
+   /**
+    * ### Chen
+    * *The object containing configurations specific for Chen's ERD*
+    */
+   chen: {
+     /**
+      * **htmlLabels** - Flag for setting whether or not a html tag should be used for rendering labels
+      * on the edges
+      */
+     htmlLabels: true,
+ 
+     curve: 'linear'
+   },
+   ```
+1. Add a new ``case`` in the ``switch`` statement in the ``parse`` method. This should match the diagram type returned from step #2. The code in this new case statement should configure the parser for the diagram type. For example:
+   ```javascript
+   case 'chen':
+     parser = chenParser
+     parser.parser.yy = chenDb
+     break
+   ```
+1. Add a new ``case`` in the ``switch`` statement in the ``render`` method. This should match the diagram type returned from step #2. The code in this new case statement should call the renderer for the diagram type with the data found by the parser as an argument. For example:
+   ```javascript
+   case 'chen':
+     config.chen.arrowMarkerAbsolute = config.arrowMarkerAbsolute
+     chenRenderer.setConf(config.chen)
+     chenRenderer.draw(txt, id, false)
+     break
+   ```
 
 ## Usage of the parser as a separate module
 
